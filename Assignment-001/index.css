@@ -1,0 +1,524 @@
+:root {
+  --black-color: #000000;
+  --pure-white: #ffffff;
+  --white-color: #fdfdfd;
+  --dark-purple-color: #210a5e;
+  --purple-color: #421abc;
+  --grey-color: #252b37;
+  --border-color: #181d27;
+  --text-hero-color: #717680;
+}
+
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--black-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+.container {
+  width: 75%;
+  max-width: 1440px;
+  margin: 0 auto 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+header.site-header {
+  padding: 1rem 0;
+  background: var(--black-color);
+}
+nav.container.nav-container {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+div.logo {
+  margin-left: 6.5%;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--white-color);
+}
+div.nav-links {
+  margin-left: 5%;
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: var(--white-color);
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+nav ul li a {
+  background-color: transparent;
+  padding: 0.5rem 0.5rem;
+  border-radius: 1rem;
+  margin: 0 0.3rem;
+  transition: background 0.3s ease;
+}
+nav ul li a:hover {
+  background-color: var(--grey-color);
+}
+a.btn-header {
+  background: var(--purple-color);
+  padding: 0.3rem 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--pure-white);
+  margin-right: -17%;
+}
+a.btn-header:hover {
+  background-color: var(--dark-purple-color);
+}
+
+/* HERO SECTION*/
+section.build-future-section {
+  background: linear-gradient(
+    180deg,
+    var(--black-color) 17.55%,
+    var(--dark-purple-color) 136.21%
+  );
+  overflow: hidden;
+}
+div.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.hero-text {
+  margin: 0 0 0 -3%;
+}
+div.hero-image img {
+  margin: 0 -3vw -1vh -9vw;
+  width: 42vw;
+}
+div.hero-text h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--white-color);
+}
+div.hero-text p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-hero-color);
+}
+div.hero-text a.btn-hero {
+  width: 42.5%;
+  margin-top: 2rem;
+  padding: 0.5rem 0;
+  background-color: var(--purple-color);
+  font-size: 0.7rem;
+  color: var(--pure-white);
+  text-align: center;
+  border-radius: 1rem;
+  display: inline-block;
+}
+div.hero-text a.btn-hero:hover {
+  background-color: var(--dark-purple-color);
+}
+
+/* WHO WE ARE SECTION */
+section.who-we-are-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+section.who-we-are-section h2 {
+  font-size: 1.75rem;
+  color: var(--white-color);
+}
+section.who-we-are-section p {
+  margin: 1rem -1.5rem 0;
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: var(--text-hero-color);
+}
+section.who-we-are-section strong {
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+/* WHAT WE DO SECTION */
+section.what-we-do-section {
+  padding: 2.5rem 0;
+  text-align: center;
+}
+section.what-we-do-section h2 {
+  font-size: 1.75rem;
+  color: var(--white-color);
+}
+section.what-we-do-section p {
+  margin-top: 0.7rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--text-hero-color);
+}
+div.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 3rem -1.75rem 0;
+  gap: 0.9rem;
+}
+div.service-card {
+  border: 1px solid var(--border-color);
+  padding: 0.65rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+div.service-card h3 {
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+div.service-card p {
+  color: var(--text-hero-color);
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+div.service-card div.icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* OUR WORK SECTION */
+section.our-work-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+section.our-work-section h2 {
+  font-size: 1.75rem;
+  color: var(--white-color);
+}
+section.our-work-section p {
+  margin-top: 0.7rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--text-hero-color);
+}
+div.portofolio-box {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+div.portofolio-card img {
+  width: 100%;
+}
+
+/* MEET THE TEAM SECTION */
+section.meet-the-team-section {
+  padding: 2.5rem 0;
+  text-align: center;
+}
+section.meet-the-team-section h2 {
+  font-size: 1.75rem;
+  color: var(--white-color);
+}
+section.meet-the-team-section p {
+  margin-top: 0.7rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--text-hero-color);
+}
+div.team-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  gap: 2.5rem;
+}
+div.team-card img {
+  width: 100%;
+}
+
+/* COLLABORATE SECTION */
+section.collaborate-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+section.collaborate-section h2 {
+  font-size: 1.75rem;
+  color: var(--white-color);
+}
+section.collaborate-section p {
+  margin-top: 0.7rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--text-hero-color);
+}
+section.collaborate-section form {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin: 2.5rem auto 0;
+  gap: 0.5rem;
+}
+section.collaborate-section form input,
+section.collaborate-section form textarea {
+  padding: 0.6rem;
+  border: solid 1px var(--grey-color);
+  border-radius: 0.6rem;
+  background: transparent;
+  font-size: 0.7rem;
+  font-family: inherit;
+}
+section.collaborate-section form label {
+  color: var(--pure-white);
+  text-align: left;
+  margin-top: 0.7rem;
+  margin-bottom: -0.25rem;
+  font-size: 0.7rem;
+}
+section.collaborate-section form button.btn-form {
+  width: 100%;
+  margin: 1.5rem 0 1.5rem;
+  padding: 0.7rem 0;
+  background-color: var(--purple-color);
+  font-size: 0.75rem;
+  color: var(--pure-white);
+  text-align: center;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+section.collaborate-section form button.btn-form:hover {
+  background-color: var(--dark-purple-color);
+}
+/* FOOTER SECTION*/
+footer.site-footer {
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+footer.site-footer p {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--text-hero-color);
+}
+
+/* MEDIA QUERIES */
+/* DEFAULT STYLE DESKTOP 1024PX */
+
+/* Breakpoint Screen Size: 
+(Mobile < 768px), (Tablet 768px–1024px), (Desktop > 1024px) */
+
+/* Berhubung contoh design figma yang diberikan hanya 2 contoh tampilan Desktop (1440px) & Mobile (394px) dan kurang sesuai dengan instruksi (tanpa contoh design untuk tampilan Tablet, maka CSS ini di design dengan anggapan bahwasanya contoh tampilan mobile design di figma yang berukuran 394px disetting kedalam ukuran layar Max-Width 768px */
+
+/* MOBILE & TABLET <= 768PX */
+@media only screen and (max-width: 768px) {
+  /* BASE */
+  .container {
+    width: 90%;
+  }
+
+  /* HEADER */
+  div.logo {
+    font-size: 3.5rem;
+    margin-left: 0%;
+  }
+  div.nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--black-color);
+    position: absolute;
+    top: 10rem;
+    left: -5vw;
+    width: 100vw;
+    height: 88rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.75rem;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  nav ul li a {
+    position: relative;
+    display: flex;
+    margin-left: 6.5%;
+    margin-right: 7%;
+    border-radius: 2rem;
+  }
+  div.nav-links.active {
+    display: flex;
+  }
+  div.container-btn-menu {
+    cursor: pointer;
+  }
+  a.btn-header {
+    display: none;
+    position: absolute;
+    left: 6.5%;
+    top: 35rem;
+    padding: 1rem 33vw;
+    font-size: 2rem;
+    border-radius: 3rem;
+  }
+  a.btn-header.active {
+    display: block;
+  }
+  div.bar1,
+  div.bar2,
+  div.bar3 {
+    width: 2.18rem;
+    height: 0.31rem;
+    background-color: var(--white-color);
+    margin: 0.37rem 0;
+    transition: 0.1s;
+  }
+  .change div.bar1 {
+    transform: translate(0, 0.68rem) rotate(-45deg);
+  }
+  .change div.bar2 {
+    opacity: 0;
+  }
+  .change div.bar3 {
+    transform: translate(0, -0.68rem) rotate(45deg);
+  }
+
+  /* HERO SECTION */
+  div.hero-container {
+    margin-top: 8%;
+    flex-direction: column;
+    text-align: center;
+  }
+  div.hero-image img {
+    width: 125%;
+    margin-top: -2rem;
+    margin-bottom: -0.5rem;
+  }
+  div.hero-text h1 {
+    font-size: 5rem;
+    text-align: left;
+    margin-left: 4%;
+    line-height: normal;
+  }
+  div.hero-text p {
+    font-size: 2rem;
+    text-align: left;
+    line-height: 1.8;
+    margin-top: 2rem;
+    margin-left: 4%;
+    margin-bottom: 1rem;
+  }
+  div.hero-text a.btn-hero {
+    width: 95%;
+    padding: 1.75rem 0;
+    font-size: 1.75rem;
+    border-radius: 3rem;
+    margin-left: 4%;
+  }
+
+  /* WHO WE ARE SECTION */
+  section.who-we-are-section h2,
+  section.what-we-do-section h2,
+  section.our-work-section h2,
+  section.meet-the-team-section h2,
+  section.collaborate-section h2 {
+    font-size: 3.5rem;
+  }
+  section.who-we-are-section p {
+    font-size: 2.3rem;
+  }
+  section.what-we-do-section p,
+  section.our-work-section p,
+  section.meet-the-team-section p,
+  section.collaborate-section p {
+    font-size: 1.9rem;
+  }
+
+  /* WHAT WE DO SECTION */
+  section.what-we-do-section {
+    margin-top: 1.5rem;
+  }
+  div.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 3rem 1rem 0;
+    gap: 2rem;
+  }
+  div.service-card h3 {
+    font-size: 2.3rem;
+    margin-top: 2.5rem;
+  }
+  div.service-card {
+    border-radius: 1.5rem;
+    padding: 1rem;
+    line-height: 3.5rem;
+  }
+  div.service-card div.icon {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  div.service-card div.icon img {
+    width: 7rem;
+  }
+
+  /* OUR WORK SECTION */
+  div.portofolio-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  div.portofolio-card img {
+    width: 100%;
+  }
+
+  /* MEET THE TEAM SECTION */
+  div.team-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  div.team-card img {
+    width: 100%;
+  }
+
+  /* COLLABORATE SECTION */
+  section.collaborate-section form {
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  section.collaborate-section form input,
+  section.collaborate-section form textarea {
+    padding: 1.75rem;
+    border-radius: 1.5rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  section.collaborate-section form label {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+  }
+  section.collaborate-section form button.btn-form {
+    width: 90vw;
+    padding: 1.6rem 1.5rem;
+    font-size: 1.75rem;
+    border-radius: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  /* FOOTER SECTION */
+  footer.site-footer p {
+    font-size: 1.5rem;
+  }
+  footer.site-footer {
+    padding: 2.5rem 0;
+  }
+}
