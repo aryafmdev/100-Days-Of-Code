@@ -17,3 +17,9 @@ Day 3: August 03, 2025
 Today's Progress: Started learning the basics of Javascript.
 
 Thoughts: After spending several days and hours learning HTML and CSS, I inititally thought they were programming languages. I was shocked to realize that they are not programming languages at all. HTML and CSS are just markup and styling languages, not programming languages. In my opinion, HTML and CSS are more like a framework or structure where programming languages are applied. Today, I spent several hours trying to understand the basic concepts of Javascript, which is one of the core programming languages for web development. It's been quite challenging since this is my first time studying it. However, I'm confident that if I continue learning, I will eventually become proficient in JavaScript and other languages needed for web development.
+
+Day 4: August 04, 2025
+
+Today's Progress: I created a simple math game for my lovely son.
+
+Thoughts: I've been working on a simple math game, with some help from tools like ChatGPT, but I've continued to adjust the code to make it into the game I envision. Today, I focused on turning the simple web-based math game into a mobile app. I successfully made it a Progressive Web App (PWA), which works when the mobile device is connected to the internet. However, it still doesn't work offline. I want to improve it so the app can be accessed even without an internet connection. As of today, I haven't managed to turn it into a native app yet-but maybe tomorrow, or sometime soon, I'll give it another try.
