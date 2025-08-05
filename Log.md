@@ -23,3 +23,9 @@ Day 4: August 04, 2025
 Today's Progress: I created a simple math game for my lovely son.
 
 Thoughts: I've been working on a simple math game, with some help from tools like ChatGPT, but I've continued to adjust the code to make it into the game I envision. Today, I focused on turning the simple web-based math game into a mobile app. I successfully made it a Progressive Web App (PWA), which works when the mobile device is connected to the internet. However, it still doesn't work offline. I want to improve it so the app can be accessed even without an internet connection. As of today, I haven't managed to turn it into a native app yet-but maybe tomorrow, or sometime soon, I'll give it another try.
+
+Day 5: August 05, 2025
+
+Today's progress: Began understanding and practicing JavaScript logic.
+
+Thoughts: So. I was sitting there, and my head started feeling all hot, like I was about to explode! 😂🤣 I've been really pushing myself to wrap my head around some basic JavaScript stuff. You know, just trying to practice with things like 'while', 'for', 'if', 'else', and 'else if. And oh man, I've had some hillarious moments trying to figure out loops like 'while' and 'for'. It's a bit wild, really, because if you mess up the code, you can end up in an infinite loop that just keeps going and going. Talk about a mind trip! I mean, that could totally overload your memory! Gotta be super careful with that!
