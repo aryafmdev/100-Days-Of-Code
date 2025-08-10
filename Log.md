@@ -39,3 +39,9 @@ Day 7: August 09, 2025
 Today's progress: Try mastering if, else if and else again, and continue learning switch, case, and default.
 
 Thoughts: I missed reporting this progress yesterday. So the yesterday's progress I updating to this day. I don't know why but I think should repeat about concept if, else if, and else, because there is any connection between switch, case, and default. And learn when to use if, and when to use switch case. Keep practicing and learn again and again until really understanding about that concept. Because I think it's important in the real conditions when I working on the project.
+
+Day 8: August 10, 2025
+
+Today's progress: Practiced and completed 6 challenges with nested loops and nested conditionals on JavaScript.
+
+Thoughts: Oh my God...! I thought my head was going to explode while trying to solve and finish the challenges using nested loops and nested conditionals. After a few hours, little by little, I started to understand the concept and I was able to finish all 6 challenges, which involved creating 6 different forms with nested loops and conditionals. Oh yeeeaaaaahhhhh.....I feel energized!! 
