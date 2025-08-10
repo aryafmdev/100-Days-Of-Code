@@ -33,3 +33,9 @@ Thoughts: So. I was sitting there, and my head started feeling all hot, like I w
 Day 5: August 05, 2025
 
 Thoughts: I would like to explain that my 100 Days of Code journal has been slightly delayed because I am currently on standby as my wife is about to give birth. Due to this situation, I haven't been able to stick to my usual coding routine. However, I'm still continuing my learning by practicing coding through mobile apps, which I can do from anywhere during this period.
+
+Day 6: August 09, 2025
+
+Today's progress: Try mastering if, else if and else again, and continue learning switch, case, and default.
+
+Thoughts: I missed reporting this progress yesterday. So the yesterday's progress I updating to this day. I don't know why but I think should repeat about concept if, else if, and else, because there is any connection between switch, case, and default. And learn when to use if, and when to use switch case. Keep practicing and learn again and again until really understanding about that concept. Because I think it's important in the real conditions when I working on the project.
