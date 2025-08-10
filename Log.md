@@ -30,11 +30,11 @@ Today's progress: Began understanding and practicing JavaScript logic.
 
 Thoughts: So. I was sitting there, and my head started feeling all hot, like I was about to explode! 😂🤣 I've been really pushing myself to wrap my head around some basic JavaScript stuff. You know, just trying to practice with things like 'while', 'for', 'if', 'else', and 'else if. And oh man, I've had some hillarious moments trying to figure out loops like 'while' and 'for'. It's a bit wild, really, because if you mess up the code, you can end up in an infinite loop that just keeps going and going. Talk about a mind trip! I mean, that could totally overload your memory! Gotta be super careful with that!
 
-Day 5: August 05, 2025
+Day 6: August 07, 2025
 
 Thoughts: I would like to explain that my 100 Days of Code journal has been slightly delayed because I am currently on standby as my wife is about to give birth. Due to this situation, I haven't been able to stick to my usual coding routine. However, I'm still continuing my learning by practicing coding through mobile apps, which I can do from anywhere during this period.
 
-Day 6: August 09, 2025
+Day 7: August 09, 2025
 
 Today's progress: Try mastering if, else if and else again, and continue learning switch, case, and default.
 
