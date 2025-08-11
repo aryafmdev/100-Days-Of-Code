@@ -45,3 +45,16 @@ Day 8: August 10, 2025
 Today's progress: Practiced and completed 6 challenges with nested loops and nested conditionals on JavaScript.
 
 Thoughts: Oh my God...! I thought my head was going to explode while trying to solve and finish the challenges using nested loops and nested conditionals. After a few hours, little by little, I started to understand the concept and I was able to finish all 6 challenges, which involved creating 6 different forms with nested loops and conditionals. Oh yeeeaaaaahhhhh.....I feel energized!! 
+
+Day 9: August 11, 2025
+
+Today's progress: I Completed the third challenge/assignment from my bootcamp code academy.
+
+Thoughts: 
+I actually finished this assignment about three days ago, but I forgot to update my journal-so I'm doing it now. This is my third assignment, and as a learner, I think it's important to document my progress here.
+This project was a whole new experience for me. It was built entirely with JavaScript-no HTML, no CSS-just 100% JavaScript, and it runs on the command line. At first, I was completely confused. The instructions didn't make much sense to me:
+"A command-line challenge? What is that?"
+"How can an application run without HTML and CSS? Is it possible?"
+Those was my thoughts when I first saw the assignment. 😂😁
+But day by day, I kept at it-breaking the challenge into smaller parts, learning as I went, and slowly things started to click. And in the end, I did it. I finished the assignment using nothing but JavaScript, and I'm really happy and proud myself for that.
+"Keep fighting, stay strong, and stay motivated for myself."💪💪💪
