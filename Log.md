@@ -58,3 +58,9 @@ This project was a whole new experience for me. It was built entirely with JavaS
 Those was my thoughts when I first saw the assignment. 😂😁
 But day by day, I kept at it-breaking the challenge into smaller parts, learning as I went, and slowly things started to click. And in the end, I did it. I finished the assignment using nothing but JavaScript, and I'm really happy and proud myself for that.
 "Keep fighting, stay strong, and stay motivated for myself."💪💪💪
+
+Day 10: August 12, 2025
+
+Today's progress: Completed some practice video from Youtube.
+
+Thoughts: I've recently completed several cases, practice exercises, and challenges from the video tutorials on YouTube. As I go through them, I'm updating this log to track my progress and reflect on what I've learned. It's been a great way to consolidate my understanding and improve my skills step by step.
