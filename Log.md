@@ -64,3 +64,9 @@ Day 10: August 12, 2025
 Today's progress: Completed some practice video from Youtube.
 
 Thoughts: I've recently completed several cases, practice exercises, and challenges from the video tutorials on YouTube. As I go through them, I'm updating this log to track my progress and reflect on what I've learned. It's been a great way to consolidate my understanding and improve my skills step by step.
+
+Day 11: August 13, 2025
+
+Today's progress: I spent some time going through coding practice and watching tutorial videos on Youtube. Got a few things done and learned a bit more today.
+
+Thoughts: Lately,I'm starting to feel like learning to code has become part of my daily routine, almost like a basic need. Even though we now have all these advanced tools like AI, they don't really solve problems for us. They're just to help us solve problems ourselves. To actually make something work, we still need to understand the core concepts behind a programming language. Ai can give you answer, sure, but most of the time. you still need to adjust it, tweak it, and really understand what it's doing before it fits into your code properly. It's kind of reassuring, honestly. AI hasn't replaced us, it's just helping us learn and work more efficiently. And that's a good thing.
