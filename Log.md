@@ -70,3 +70,9 @@ Day 11: August 13, 2025
 Today's progress: I spent some time going through coding practice and watching tutorial videos on Youtube. Got a few things done and learned a bit more today.
 
 Thoughts: Lately,I'm starting to feel like learning to code has become part of my daily routine, almost like a basic need. Even though we now have all these advanced tools like AI, they don't really solve problems for us. They're just to help us solve problems ourselves. To actually make something work, we still need to understand the core concepts behind a programming language. Ai can give you answer, sure, but most of the time. you still need to adjust it, tweak it, and really understand what it's doing before it fits into your code properly. It's kind of reassuring, honestly. AI hasn't replaced us, it's just helping us learn and work more efficiently. And that's a good thing.
+
+Day 12: August 15, 2025
+
+Today's progress: Reinforcing the fundamentals of JavaScript
+
+Thoughts: So, the other day I had a discussion with my friends about a real project where we’re using JavaScript, and it got me thinking. I realized I need to switch up my approach to studying, especially when it comes to sharpening my skills and logic in JavaScript. That's why I've decided to go back to the basics—to really reinforce the fundamentals of my JavaScript knowledge.
