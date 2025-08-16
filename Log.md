@@ -73,6 +73,12 @@ Thoughts: Lately,I'm starting to feel like learning to code has become part of m
 
 Day 12: August 15, 2025
 
-Today's progress: Reinforcing the fundamentals of JavaScript
+Today's progress: Reinforcing the fundamentals of JavaScript.
 
 Thoughts: So, the other day I had a discussion with my friends about a real project where we’re using JavaScript, and it got me thinking. I realized I need to switch up my approach to studying, especially when it comes to sharpening my skills and logic in JavaScript. That's why I've decided to go back to the basics—to really reinforce the fundamentals of my JavaScript knowledge.
+
+Day 13: August 16, 2025
+
+Today's progress: Days 2 Reinforcing the fundamentals of Javascript.
+
+Thoughts: Today marks my second day of focusing on strengthening my JavaScript fundamentals. With a new study strategy in place, I can already feel my basics getting stronger. This feels really promising for the future, as I know that building a solid foundation now will pay off in the long run. It’s clear that investing time in mastering the fundamentals is key for long-term success in coding.
