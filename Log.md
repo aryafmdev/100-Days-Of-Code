@@ -82,3 +82,9 @@ Day 13: August 16, 2025
 Today's progress: Days 2 Reinforcing the fundamentals of Javascript.
 
 Thoughts: Today marks my second day of focusing on strengthening my JavaScript fundamentals. With a new study strategy in place, I can already feel my basics getting stronger. This feels really promising for the future, as I know that building a solid foundation now will pay off in the long run. It’s clear that investing time in mastering the fundamentals is key for long-term success in coding.
+
+Day 14: August 17, 2025
+
+Today's progress: Days 3 Reinforcing the fundamentals of Javascript.
+
+Thoughts: Today, I spent some time revisiting the basics of JavaScript through live coding. I worked through about 30 problems topics like loops & conditionals. It felt like a good refresher since I’ve been learning more advanced stuff recently, and going back to the fundamentals really helped me catch some small mistakes I had missed before. The live coding aspect was super helpful because I could test my solutions right away and debug as I went. It was a solid reminder that sometimes you need to revisit the basics to strengthen your understanding for the more complicated stuff ahead.
