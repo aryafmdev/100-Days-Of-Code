@@ -88,3 +88,10 @@ Day 14: August 17, 2025
 Today's progress: Days 3 Reinforcing the fundamentals of Javascript.
 
 Thoughts: Today, I spent some time revisiting the basics of JavaScript through live coding. I worked through about 30 problems topics like loops & conditionals. It felt like a good refresher since I’ve been learning more advanced stuff recently, and going back to the fundamentals really helped me catch some small mistakes I had missed before. The live coding aspect was super helpful because I could test my solutions right away and debug as I went. It was a solid reminder that sometimes you need to revisit the basics to strengthen your understanding for the more complicated stuff ahead.
+
+Day 15: August 19, 2025
+
+Today's progress: Days 4 Reinforcing the fundamentals of Javascript.
+
+Thoughts: Right now, I’m on full standby—my wife is about to give birth any day now, and we’ve been going back and forth to the maternity clinic quite a bit lately. It’s a rollercoaster of emotions: excitement, nervousness, anticipation… all wrapped into one.
+As a husband, being present and ready at all times is my top priority right now, which makes focusing on learning and coding practice pretty challenging. Concentration just doesn’t come as easily these days, with everything going on. Still, I try to carve out a few minutes here and there to squeeze in some JavaScript practice. It’s definitely not as much as I used to do before this “baby watch” phase started, but I’m doing what I can. A few exercises at a time—slow progress, but progress nonetheless. Life’s in a bit of a pause-and-go rhythm at the moment. But that’s okay. I’m learning to balance, breathe, and just ride the wave.
