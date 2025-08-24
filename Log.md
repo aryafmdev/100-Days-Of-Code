@@ -102,8 +102,16 @@ Thoughts: Today, I couldn’t study JavaScript as well as I wanted. The reason? 
 
 Day 17: August 23, 2025
 
-Today's progress: Day 1st on working 5th Assignment from bootcamp academy.
+Today's progress: 1st day working on the 5th Assignment from my bootcamp academy.
 
 Thoughts: So, for my 5th assignment in the Code Academy class, it’s a group project where we need to build a website together. The main focus of this task is to really hone our teamwork and collaboration skills using GitHub. I’ve volunteered to take on a bigger chunk of the work, mainly because I want to improve my design slicing skills from Figma. I’m excited to dive in and practice more—let’s make this project awesome!
 
 Bring on the challenge! 🚀
+
+Day 18: August 24, 2025
+
+Today's progress: 2nd day working on the 5th assignment from my bootcamp academy.
+
+Wow, today was a big surprise! I didn’t expect it, but I managed to slice a lot faster than before. I remember it used to take me around 5 full days to slice just one landing page, but today, I was able to handle two pages in a single day. That’s amazing progress in my book! It really pumped me up and gave me even more motivation to keep learning and push towards becoming a front-end web development expert.
+
+Feeling super excited about the journey ahead! 🚀
