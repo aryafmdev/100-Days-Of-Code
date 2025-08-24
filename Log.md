@@ -95,3 +95,11 @@ Today's progress: Days 4 Reinforcing the fundamentals of Javascript.
 
 Thoughts: Right now, I’m on full standby—my wife is about to give birth any day now, and we’ve been going back and forth to the maternity clinic quite a bit lately. It’s a rollercoaster of emotions: excitement, nervousness, anticipation… all wrapped into one.
 As a husband, being present and ready at all times is my top priority right now, which makes focusing on learning and coding practice pretty challenging. Concentration just doesn’t come as easily these days, with everything going on. Still, I try to carve out a few minutes here and there to squeeze in some JavaScript practice. It’s definitely not as much as I used to do before this “baby watch” phase started, but I’m doing what I can. A few exercises at a time—slow progress, but progress nonetheless. Life’s in a bit of a pause-and-go rhythm at the moment. But that’s okay. I’m learning to balance, breathe, and just ride the wave.
+
+Day 16: August 23, 2025
+
+Today's progress: Day 1st on working 5th Assignment from bootcamp academy.
+
+Thoughts: So, for my 5th assignment in the Code Academy class, it’s a group project where we need to build a website together. The main focus of this task is to really hone our teamwork and collaboration skills using GitHub. I’ve volunteered to take on a bigger chunk of the work, mainly because I want to improve my design slicing skills from Figma. I’m excited to dive in and practice more—let’s make this project awesome!
+
+Bring on the challenge! 🚀
