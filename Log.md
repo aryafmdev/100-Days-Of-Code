@@ -99,3 +99,11 @@ As a husband, being present and ready at all times is my top priority right now,
 Day 16: August 20, 2025
 
 Thoughts: Today, I couldn’t study JavaScript as well as I wanted. The reason? I was waiting at the clinic for my wife to give birth! It was such an intense and emotional day. Because I was mostly by her side, I didn’t have much time to dive deep into coding practice. Instead of doing hands-on programming, I only managed to review some theory by answering questions through a mobile app. It wasn’t the ideal way to study, but at least I kept my brain active and stayed connected to the material. Even though I didn’t get to write code today, I feel proud to support my wife during this big moment. Coding will wait; family comes first. Tomorrow, I hope to get back to proper practice with full focus.
+
+Day 17: August 23, 2025
+
+Today's progress: Day 1st on working 5th Assignment from bootcamp academy.
+
+Thoughts: So, for my 5th assignment in the Code Academy class, it’s a group project where we need to build a website together. The main focus of this task is to really hone our teamwork and collaboration skills using GitHub. I’ve volunteered to take on a bigger chunk of the work, mainly because I want to improve my design slicing skills from Figma. I’m excited to dive in and practice more—let’s make this project awesome!
+
+Bring on the challenge! 🚀
