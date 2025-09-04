@@ -44,13 +44,13 @@ Day 8: August 10, 2025
 
 Today's progress: Practiced and completed 6 challenges with nested loops and nested conditionals on JavaScript.
 
-Thoughts: Oh my God...! I thought my head was going to explode while trying to solve and finish the challenges using nested loops and nested conditionals. After a few hours, little by little, I started to understand the concept and I was able to finish all 6 challenges, which involved creating 6 different forms with nested loops and conditionals. Oh yeeeaaaaahhhhh.....I feel energized!! 
+Thoughts: Oh my God...! I thought my head was going to explode while trying to solve and finish the challenges using nested loops and nested conditionals. After a few hours, little by little, I started to understand the concept and I was able to finish all 6 challenges, which involved creating 6 different forms with nested loops and conditionals. Oh yeeeaaaaahhhhh.....I feel energized!!
 
 Day 9: August 11, 2025
 
 Today's progress: I Completed the third challenge/assignment from my bootcamp code academy.
 
-Thoughts: 
+Thoughts:
 I actually finished this assignment about three days ago, but I forgot to update my journal-so I'm doing it now. This is my third assignment, and as a learner, I think it's important to document my progress here.
 This project was a whole new experience for me. It was built entirely with JavaScript-no HTML, no CSS-just 100% JavaScript, and it runs on the command line. At first, I was completely confused. The instructions didn't make much sense to me:
 "A command-line challenge? What is that?"
@@ -135,3 +135,9 @@ Day 21: August 27, 2025
 Today's progress: The Final Countdown
 
 Thoughts: It’s Day 5, and we're down to the wire. Just a few hours left before the deadline, and honestly, it’s a relief to say that we’re almost there. The website, which was the main focus, has finally been sliced from Figma and converted into neat HTML with Tailwind CSS. I can't tell you how much of a weight that lifts off my shoulders. After some late-night tweaking, everything is looking solid — responsive, functional, and pretty much exactly what we envisioned. It's a great feeling to know that we’ve completed the bulk of the work. But, of course, there’s always a but. We’re not quite done yet. The next task at hand is preparing the presentation. We need to create a PowerPoint file that explains the entire process — from the Figma design, the slicing, the HTML structure, and the magic of Tailwind. It’s a bit of a scramble right now, but I’m confident that we can pull it off. I’m gathering all the visuals, screenshots, and key points, trying to condense everything into a concise, professional, yet simple presentation. It’s not the biggest task, but it’s crucial for the submission. Plus, it’ll be our chance to showcase the hard work and explain how we tackled the project. We’re so close. A few more hours of focus, and this will all be behind us. I just hope the final touches come together smoothly, and we can submit this with pride.
+
+Day 22: September, 2025
+
+Today's progress: Taking a Break After the Slicing Design Task and GitHub Collaboration
+
+Thoughts: After successfully completing the group task on slicing design from Figma and collaborating with GitHub, I decided it was time to take a short break from all things coding. The past week has been quite an exciting and busy one for me, especially with the arrival of my third child. With family and relatives visiting to celebrate the new addition to our family, I felt it was the perfect moment to step away from the screen and take a breather. While my main coding activities are now on pause, I’ve still kept myself involved in some light theoretical exercises—mainly answering questions and text-based problems to keep my mind sharp and test my limits. It’s been a good way to stay engaged with the learning process without getting back into the intensity of actual coding work. As much as I love coding and the sense of accomplishment that comes with completing tasks like the Figma slicing and GitHub collaboration, family time has been my priority lately. I’m grateful for this pause and looking forward to diving back into the world of coding once things settle down a bit.
