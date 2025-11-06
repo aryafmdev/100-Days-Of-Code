@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Validation App</title>
-</head>
-<body bgcolor="black" text="white">
-  <h2>Login Form</h2>
-  <form action="" onsubmit="validateForm(event)">
-    <label for="">Email:</label>
-    <input type="email" id="email"> <br><br>
-    
-    <label for="">Password:</label>
-    <input type="password" id="password"> <br><br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation App</title>
+    <style>
+      body {
+        background-color: #2f2f2f; /* abu gelap */
+        color: #ffffff; /* teks putih */
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 20px;
+        /* justify-content: center;
+        align-items: center; */
+        text-align: start;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Login Form</h2>
+    <form action="" onsubmit="validateForm(event)">
+      <label for="">Email:</label>
+      <input type="email" id="email" /> <br /><br />
 
-    <button type="submit">Login</button>
-  </form>
-  
-  <p id="feedback"></p>
+      <label for="">Password:</label>
+      <input type="password" id="password" /> <br /><br />
 
-  <script src="script.js"></script>
-</body>
+      <button type="submit">Login</button>
+    </form>
+    <p id="feedback"></p>
+
+    <script src="script.js"></script>
+  </body>
 </html>
