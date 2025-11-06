@@ -680,9 +680,31 @@ const multipleOfIndex = array =>
 // 080 csv representation of array
 const toCsvText = array => array.map(row => row.join(",")).join("\n");
 
+// 081 multiplication table for number
+const multiTable = number => Array.from({length: 10}, (_, i) => `${i + 1} * ${number} = ${number * (i + 1)}`).join("\n");
 
+// 082 type of sum - TYPEOF
+function typeOfSum(a, b) {
+  return typeof(a+b);
+}
+// idiomatic version
+const typeOfSum = (a,b) => typeof(a+b);
 
+// 083 array plus array
+// const arrayPlusArray = (arr1, arr2) => 
+// arr1.reduce((sum, n) => sum + n, 0) +
+// arr2.reduce((sum, n) => sum + n, 0);
+// refactoring version
+const arrayPlusArray = (arr1, arr2) => 
+  [...arr1, ...arr2].reduce((sum, n) => sum + n, 0);
 
+// 084 sort my textbooks - TRICKY BANGET NIH SOAL
+const sorter = textbooks =>
+  textbooks.sort((a, b) => {
+    const lowerA = a.toLowerCase();
+    const lowerB = b.toLowerCase();
+    return lowerA < lowerB ? -1 : lowerA > lowerB ? 1 : 0;
+  });
 
 
 
