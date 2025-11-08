@@ -159,18 +159,213 @@ const sides = (literal, area, perimeter) => {
 // idiomatic version ES6+
 const modifyArray = (nums) => nums.map((n) => (n % 2 === 0 ? n * 2 : n * 3));
 
-// 18 bitwise operators
+// 18 bitwise operators BELUM DIPELAJARI
+// idiomatic top tier version
+function getMaxLessThanK(n, k) {
+  return ((k - 1) | k) <= n ? k - 1 : k - 2;
+}
 
-// 19 javascript dates
+// 19 javascript dates BELUM DIPELAJARI
+// top tier idiomatic version
+const getDayName = dateString =>
+  new Date(dateString).toLocaleDateString('en-US', { weekday: 'long' });
 
-// 20 regular expressions I
+// 20 regular expressions I BELUM DIPELAJARI
+// top tier idiomatic version
+const regexVar = () => /^([aeiou]).*?\1$/i;
+// common version
+function regexVar() {
+  return /^([aeiou]).*?\1$/i;
+}
 
-// 21 regular expressions II
+// 21 regular expressions II BELUM DIPELAJARI
+function regexVar() {
+  return /^(Mr|Mrs|Ms|Dr|Er)\.[a-zA-Z]+$/;
+}
+// top tier idiomatic version
+const regexVar = () => /^(Mr|Mrs|Ms|Dr|Er)\.[a-zA-Z]+$/;
 
-// 22 regular expressions III
+// 22 regular expressions III BELUM DIPELAJARI
+function regexVar() {
+  return /\d+/g;
+}
+// top tier idiomatic version
+const regexVar = () => /\d+/g;
 
-// 23 create a button
+// 23 create a button PELAJARI LAGI
+// <!-- Enter your HTML code here -->
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <meta charset="utf-8">
+//         <title>Button</title>
+//         <link rel="stylesheet" href="css/button.css" type="text/css">
+//     </head>
+//     <body>
+//         <script src="js/button.js" type="text/javascript"></script>
+//     </body>
+// </html>
+// CSS CODE
+// #btn {
+//   width: 96px;
+//   height: 48px;
+//   font-size: 24px;
+// }
+// JS CODE
+// const button = document.createElement('button');
+// button.id = 'btn';
+// button.innerHTML = '0';
 
-// 24 buttons container
+// button.addEventListener('click', () => {
+//   button.innerHTML = String(Number(button.innerHTML) + 1);
+// });
 
-// 25 binary calculator
+// document.body.appendChild(button);
+
+// 24 buttons container PELAJARI LAGI
+// <!-- Enter your HTML code here -->
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <meta charset="utf-8">
+//         <title>Buttons Grid</title>
+//         <link rel="stylesheet" href="css/buttonsGrid.css" type="text/css">
+//     </head>
+//     <body>
+//         <script src="js/buttonsGrid.js" type="text/javascript"></script>
+//     </body>
+// </html>
+// CSS CODE
+// #btns {
+//   width: 360px;
+// }
+
+// #btns button {
+//   width: 120px;
+//   height: 48px;
+//   font-size: 24px;
+// }
+// JS CODE
+// const container = document.createElement('div');
+// container.id = 'btns';
+// document.body.appendChild(container);
+
+// // Create 9 buttons with IDs btn1 to btn9
+// for (let i = 1; i <= 9; i++) {
+//   const btn = document.createElement('button');
+//   btn.id = `btn${i}`;
+//   btn.innerHTML = String(i);
+//   container.appendChild(btn);
+// }
+
+// // Rotation logic on btn5 click
+// document.getElementById('btn5').addEventListener('click', () => {
+//   const ids = ['btn1', 'btn2', 'btn3', 'btn6', 'btn9', 'btn8', 'btn7', 'btn4'];
+//   const values = ids.map(id => document.getElementById(id).innerHTML);
+//   values.unshift(values.pop()); // Rotate clockwise
+//   ids.forEach((id, i) => {
+//     document.getElementById(id).innerHTML = values[i];
+//   });
+// });
+
+// 25 binary calculator PELAJARI LAGI
+// <!-- Enter your HTML code here -->
+// <!DOCTYPE html>
+// <html>
+//     <head>
+//         <meta charset="utf-8">
+//         <title>Binary Calculator</title>
+//         <link rel="stylesheet" href="css/binaryCalculator.css" type="text/css">
+//     </head>
+//     <body>
+//         <script src="js/binaryCalculator.js" type="text/javascript"></script>
+//     </body>
+// </html>
+// CSS CODE
+// body {
+//   width: 33%;
+// }
+
+// #res {
+//   background-color: lightgray;
+//   border: solid;
+//   height: 48px;
+//   font-size: 20px;
+// }
+
+// #btns button {
+//   width: 25%;
+//   height: 36px;
+//   font-size: 18px;
+//   margin: 0px;
+//   float: left;
+// }
+
+// #btn0, #btn1 {
+//   background-color: lightgreen;
+//   color: brown;
+// }
+
+// #btnClr, #btnEql {
+//   background-color: darkgreen;
+//   color: white;
+// }
+
+// #btnSum, #btnSub, #btnMul, #btnDiv {
+//   background-color: black;
+//   color: red;
+// }
+// JS CODE
+// const res = document.createElement('div');
+// res.id = 'res';
+// document.body.appendChild(res);
+
+// const btns = document.createElement('div');
+// btns.id = 'btns';
+// document.body.appendChild(btns);
+
+// const buttons = [
+//   { id: 'btn0', label: '0' },
+//   { id: 'btn1', label: '1' },
+//   { id: 'btnClr', label: 'C' },
+//   { id: 'btnEql', label: '=' },
+//   { id: 'btnSum', label: '+' },
+//   { id: 'btnSub', label: '-' },
+//   { id: 'btnMul', label: '*' },
+//   { id: 'btnDiv', label: '/' }
+// ];
+
+// buttons.forEach(({ id, label }) => {
+//   const btn = document.createElement('button');
+//   btn.id = id;
+//   btn.innerHTML = label;
+//   btns.appendChild(btn);
+// });
+
+// // Event bindings
+// document.getElementById('btn0').onclick = () => res.innerHTML += '0';
+// document.getElementById('btn1').onclick = () => res.innerHTML += '1';
+// document.getElementById('btnSum').onclick = () => res.innerHTML += '+';
+// document.getElementById('btnSub').onclick = () => res.innerHTML += '-';
+// document.getElementById('btnMul').onclick = () => res.innerHTML += '*';
+// document.getElementById('btnDiv').onclick = () => res.innerHTML += '/';
+
+// document.getElementById('btnClr').onclick = () => res.innerHTML = '';
+
+// document.getElementById('btnEql').onclick = () => {
+//   const expr = res.innerHTML;
+//   const [a, op, b] = expr.split(/([+\-*/])/);
+//   const x = parseInt(a, 2);
+//   const y = parseInt(b, 2);
+//   let result;
+
+//   switch (op) {
+//     case '+': result = x + y; break;
+//     case '-': result = x - y; break;
+//     case '*': result = x * y; break;
+//     case '/': result = Math.floor(x / y); break;
+//   }
+
+//   res.innerHTML = result.toString(2);
+// };
+  
