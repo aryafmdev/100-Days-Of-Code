@@ -13,7 +13,7 @@
 // 04 functions - factorial
 // const factorial = n => n === 0 ? 1 : n * factorial(n - 1);
 
-// 05 let & const
+// 05 let & const - ADA JEBAKAN DI R HARUS SESUAI INTRUKSI SOAL
 // const PI = Math.PI;
 // const r = +readline();
 // const area = PI * (r**2);
@@ -22,6 +22,8 @@
 // console.log(area);
 // // Print the perimeter of the circle:
 // console.log(perimeter);
+
+////////////////////////////////////////////////////////////////////////
 
 // 06 conditional statement if-else
 // const getGrade = score =>
@@ -38,12 +40,26 @@
 //   'bcdfg'.includes(s[0]) ? 'B' :
 //   'hjklm'.includes(s[0]) ? 'C' : 'D';
 
-// 08 loops
+// 08 loops - REFACTORED LEBIH MUDAH DIPAHAMI
+const vowelsAndConsonants = s => {
+  const isVowel = v => 'aiueo'.includes(v);
+  const isConsonant = c => !isVowel.includes(c);
+  const chars = s.split('');
 
-// 09 arrays
+  chars.filter(isVowel).forEach(v => console.log(v));
+  chars.filter(isConsonant).forEach(c => console.log(c));
+};
+
+// 09 arrays - PAKAI SPREAD OPERATOR & NEW SET() SORT() AT()
+const getSecondLargest = nums =>
+[...new Set(nums)].sort((a,b)=>b-a).at(1);
+
+////////////////////////////////////////////////////////////////////////
 
 // 10 try catch finally
 
 // 11 throw
+
+////////////////////////////////////////////////////////////////////////
 
 // 12 create a rectangle object
