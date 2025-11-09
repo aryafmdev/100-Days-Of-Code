@@ -40,13 +40,13 @@
 // 'hjklm'.includes(s[0]) ? 'C' : 'D';
 
 // 08 loops - INCLUDES() SPLIT() FILTER() FOREACH()
-// PERLU DIULANG msh belum paham
-const vowelsAndConsonants = (s) => {
-  const isVowel = (c) => 'aiueo'.includes(c);
-  const chars = s.split('');
-
-  chars.filter(isVowel).forEach((c) => console.log(c));
-  chars.filter((c) => !isVowel(c)).forEach((c) => console.log(c));
+const vowelsAndConsonants = s => {
+  const isVowel = v => 'aiueo'.includes(v); // alat penyaring vokal
+  const isConsonant = c => !isVowel(c); // alat penyaring konsonan
+  const chars = s.split(''); // ubah string jadi array huruf
+  
+  chars.filter(isVowel).forEach(v => console.log(v)); // cetak vokal
+  chars.filter(isConsonant).forEach(c => console.log(c)); // cetak konsonan
 };
 
 // 09 arrays - [...new set(arr)] & sort descending (besar ke kecil)
