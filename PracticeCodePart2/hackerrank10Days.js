@@ -40,17 +40,17 @@
 // 'hjklm'.includes(s[0]) ? 'C' : 'D';
 
 // 08 loops - INCLUDES() SPLIT() FILTER() FOREACH()
-const vowelsAndConsonants = s => {
-  const isVowel = v => 'aiueo'.includes(v); // alat penyaring vokal
-  const isConsonant = c => !isVowel(c); // alat penyaring konsonan
-  const chars = s.split(''); // ubah string jadi array huruf
-  
-  chars.filter(isVowel).forEach(v => console.log(v)); // cetak vokal
-  chars.filter(isConsonant).forEach(c => console.log(c)); // cetak konsonan
-};
+// const vowelsAndConsonants = s => {
+//   const isVowel = v => 'aiueo'.includes(v); // alat penyaring vokal
+//   const isConsonant = c => !isVowel(c); // alat penyaring konsonan
+//   const chars = s.split(''); // ubah string jadi array huruf
+
+//   chars.filter(isVowel).forEach(v => console.log(v)); // cetak vokal
+//   chars.filter(isConsonant).forEach(c => console.log(c)); // cetak konsonan
+// };
 
 // 09 arrays - [...new set(arr)] & sort descending (besar ke kecil)
-const getSecondLargest = (nums) => [...new Set(nums)].sort((a, b) => b - a)[1];
+// const getSecondLargest = (nums) => [...new Set(nums)].sort((a, b) => b - a)[1];
 
 // 10 try, catch, & finally - TRY CATCH FINALLY
 // PERLU DIULANG !!!
@@ -87,21 +87,13 @@ const validateEmail = (email) => {
 };
 
 // 12 create a rectangle object
-// cara lama ES5
 function Rectangle(a, b) {
-  (this.length = a),
-    (this.width = b),
-    (this.perimeter = 2 * (a + b)),
-    (this.area = a * b);
-}
-// cara baru ES6+
-class Rectangle {
-  constructor(a, b) {
-    this.length = a;
-    this.width = b;
-    this.perimeter = 2 * (a + b);
-    this.area = a * b;
-  }
+  return {
+    length: a,
+    width: b,
+    perimeter: 2 * (a + b),
+    area: a * b
+  };
 }
 
 // 13 count objects - FILTER() - REDUCE()
