@@ -706,7 +706,9 @@ const sorter = textbooks =>
     return lowerA < lowerB ? -1 : lowerA > lowerB ? 1 : 0;
   });
 
-
+// 085 find the first non-consecutive number
+const firstNonConsecutive = arr =>
+  arr.find((val, i) => i > 0 && val !== arr[i-1]+1)??null;
 
 
 
