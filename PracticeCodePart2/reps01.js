@@ -63,8 +63,6 @@
 // const getSecondLargest = nums =>
 // [...new Set(nums)].sort((a,b)=>b-a).at(1);
 
-////////////////////////////////////////////////////////////////////////
-
 // 10 try catch finally - OKE
 // const reverseString = s => {
 //   try {
@@ -84,28 +82,68 @@
 // };
 
 // 12 create a rectangle function
-function Rectangle(a, b) {
-  return {
-    length: a,
-    width: b,
-    perimeter: 2 * (a + b),
-    area: a * b
-  };
-}
+// function Rectangle(a, b) {
+//   return {
+//     length: a,
+//     width: b,
+//     perimeter: 2 * (a + b),
+//     area: a * b
+//   };
+// }
 
 // 13 count objects
-const getCount = objects =>
-  objects.reduce((sum, { x, y }) => sum + (x === y), 0);
+// const getCount = objects =>
+//   objects.reduce((sum, { x, y }) => sum + (x === y), 0);
 
-// 14 classes
-
-
-// 15 inheritance
-
+// 17 arrow functions
+// const modifyArray = nums => 
+//   nums.map(n => (n % 2 === 0 ? n * 2 : n * 3));
 
 // 16 template literals
+// const sides = (literal, area, perimeter) => {
+//   const root = Math.sqrt(perimeter ** 2 - 16 * area);
+//   return [(perimeter - root) / 4, (perimeter + root) / 4].sort((a, b) => a - b);
+// };
 
+// 14 classes
+// class Polygon {
+//   constructor(sides) {
+//     this.sides=sides;
+//   }
 
+//   perimeter() {
+//     return this.sides.reduce((sum, s)=>sum+s, 0);
+//   }
+// }
+
+// 15 inheritance
+// tambah method area ke prototype
+// Rectangle.prototype.area = function () {
+//   return this.w * this.h;
+// };
+// buat class yang inherit dari rectangle
+// class Square extends Rectangle {
+//   constructor(side) {
+//     super(side, side);
+//   }
+// }
+
+// // 19 javascript dates
+// const getDayName = dateString =>
+//   new Date(dateString).toLocaleDateString('en-US', { weekday: 'long' });
+
+// // 20 regex I
+// const regexVar = () => /^([aeiou]).*?\1$/i;
+
+// // 21 regex II
+// const regexVar = () => /^(Mr|Mrs|Ms|Dr|Er)\.[a-zA-Z]+$/;
+
+// // 22 regex III
+// const regexVar = () => /\d+/g;
+
+// 18 bitwise operators
+const getMaxLessThanK = (n, k) =>
+  ((k - 1) | k) <= n ? k - 1 : k - 2;
 
 
 
