@@ -57,7 +57,7 @@
 //     let sum = 0;                       // wadah kosong untuk menampung hasil penjumlahan digit
 //     let temp = num;                    // salinan angka yang akan dipecah
 
-//     while (num > 0) {                  // selama masih ada digit di temp
+//     while (temp > 0) {                  // selama masih ada digit di temp
 //       sum += temp % 10;                // ambil digit terakhir dan tambahkan ke sum
 //       temp = Math.floor(temp/10);      // buang digit terakhir
 //     }
@@ -66,9 +66,60 @@
 //   return num;                          // kalau sudah 1 digit kembalikan hasilnya
 // };
 
-let addDigits = function(num) {
-  if (num===0) return 0;
-  return 1+(num-1)%9;
-};
+// let addDigits = function(num) {
+//   if (num===0) return 0;
+//   return 1+(num-1)%9;
+// };
+
+// console.log(addDigits(38));
+// console.log(addDigits(387));
+// console.log(addDigits(3876));
+// console.log(addDigits(38765));
+// console.log(addDigits(387654));
+// console.log(addDigits(3876543));
+// console.log(addDigits(38765432));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 console.log(addDigits(38));
