@@ -142,8 +142,8 @@
 // const regexVar = () => /\d+/g;
 
 // 18 bitwise operators
-const getMaxLessThanK = (n, k) =>
-  ((k - 1) | k) <= n ? k - 1 : k - 2;
+// const getMaxLessThanK = (n, k) =>
+//   ((k - 1) | k) <= n ? k - 1 : k - 2;
 
 
 
