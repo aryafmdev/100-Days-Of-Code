@@ -79,47 +79,30 @@
 // console.log(addDigits(3876543));
 // console.log(addDigits(38765432));
 
+// 258  Add Digits Day 2
+// let addDigits = function(num) {
+//   if (num===0) return 0;
+//   return 1+(num-1)%9;
+// };
 
+// function addDigits (num) {
+//   if (num===0) return 0;
+//   return 1+(num-1)%9;
+// };
 
+function addDigits (num) {
+while (num>=10) {
+  let sum = 0;
+  let temp = num;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  while (temp>0) {
+    sum += temp%10;
+    temp = Math.floor(temp/10);
+  }
+  num = sum;
+}
+return num;
+};
 
 
 console.log(addDigits(38));
