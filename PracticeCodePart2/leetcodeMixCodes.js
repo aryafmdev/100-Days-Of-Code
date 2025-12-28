@@ -159,47 +159,46 @@
 //     return 1+(num-1)%9;
 // }
 
-function addDigits(num) {
-  while(num>=10) {
-      let sum = 0;
-      let temp = num;
+// function addDigits(num) {
+//   while(num>=10) {
+//       let sum = 0;
+//       let temp = num;
       
-      while(temp>0) {
-          sum += temp%10;
-          temp = Math.floor(temp/10);
-      }
-      num = sum;
-  }
-  return num;
-}
+//       while(temp>0) {
+//           sum += temp%10;
+//           temp = Math.floor(temp/10);
+//       }
+//       num = sum;
+//   }
+//   return num;
+// }
 
 
+// 258 Add Digits Day 6
 
+// let addDigits = function(num) {
+//   if (num===0) return 0;
+//   return 1+(num-1)%9;
+// };
 
+// function addDigits(num) {
+//   while (num>=10) {
+//       let sum = 0;
+//       let temp = num;
+      
+//       while (temp>0) {
+//           sum += temp%10;
+//           temp = Math.floor(temp/10);
+//       }
+//       num = sum;
+//   }
+//   return num;
+// };
 
+// console.log(addDigits(38));
 
+// 2667. Create Hello World Day 1
+let createHelloWorld = () => () => "Hello World";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-console.log(addDigits(38));
+let f = createHelloWorld();
+console.log(f());
