@@ -1,7 +1,7 @@
-### 📅 100 Days of Code - My Journey to Master Software Engineer - Front End
+### 📅 100 Days of Code - My Journey to Master Software Engineer
 
 Welcome to my **100 Days of Code** repository!
-This is a personal challenge where I commit to coding every day for 100 days, with the goal of honing my skills as a **Full Stack Developer** and **Python Developer**. Each day, I’ll tackle different projects, solve coding problems, and document my learning progress.
+This is a personal challenge where I commit to coding every day for 100 days, with the goal of honing my skills as a **Software Engineer**. Each day, I’ll tackle different projects, solve coding problems, and document my learning progress.
 
 By following this challenge, I aim to:
 
