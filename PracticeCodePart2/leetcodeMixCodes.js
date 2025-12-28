@@ -198,7 +198,20 @@
 // console.log(addDigits(38));
 
 // 2667. Create Hello World Day 1
-let createHelloWorld = () => () => "Hello World";
+// let createHelloWorld = () => () => "Hello World";
 
-let f = createHelloWorld();
-console.log(f());
+// let f = createHelloWorld();
+// console.log(f());
+
+// 2620. Counter Day 1
+
+// let createCounter = (n) => () => n++;
+
+let createCounter = function(n){
+  return function() {
+    return n++;
+  };
+};
+
+let counter = createCounter(10);
+console.log(counter());
