@@ -257,16 +257,68 @@
 //     };
 // };
 
-function createCounter(n) {
-  return function() {
-      return n++;
-  };
-};
+// function createCounter(n) {
+//   return function() {
+//       return n++;
+//   };
+// };
 
-let counter = createCounter(2);
-console.log(counter());
-console.log(counter());
-console.log(counter());
-console.log(counter());
-console.log(counter());
-console.log(counter());
+// let counter = createCounter(2);
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// ======================================
+// 2667. Create hello world - Day - 3
+// let createHelloWorld = () => () => "Hello World";
+
+// let word = createHelloWorld();
+// console.log(word());
+
+// 2620. Create Counter - Day - 3
+
+// let createCounter = function(n) {
+//     return function() {
+//         return n++;
+//     };
+// };
+
+// function createCounter(n) {
+//   return function() {
+//       return n++;
+//   }
+// }
+
+// let counter = createCounter(2);
+// console.log(counter());
+
+// 258. Add Digits - Day - 8
+
+// let addDigits = function(num) {
+//     if(num===0) return 0;
+//     return 1+(num-1)%9;
+// };
+
+// function addDigits(num) {
+//     if(num===0) return 0;
+//     return 1+(num-1)%9;
+// };
+
+// let addDigits = function(num) {
+//     while(num>=10) {
+//         let sum = 0;
+//         let temp = num;
+        
+//         while(temp>0) {
+//             sum += temp%10;
+//             temp = Math.floor(temp/10);
+//         }
+//         num = sum;
+//     }
+//     return num;
+// }
+
+// console.log(addDigits(38))
