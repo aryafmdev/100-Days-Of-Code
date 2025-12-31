@@ -373,13 +373,13 @@
 //     };
 // };
 
-let createCounter = (n) => () => n++;
+// let createCounter = (n) => () => n++;
 
-let counter = createCounter(8);
-console.log(counter());
-console.log(counter());
-console.log(counter());
-console.log(counter());
+// let counter = createCounter(8);
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
 
 // 2667. Hello World - Day - 4
 // let HelloWorld = () => () => "Hello World";
@@ -392,3 +392,18 @@ console.log(counter());
 
 // let word = createHelloWorld();
 // console.log(word());
+
+// LeetCode 1480 - Running Sum of 1D Array - Day -1
+
+// const runningSum = (nums) => {
+//   let sum = 0;
+//   return nums.map(num => sum += num);
+// };
+
+let runningSum = (nums) => {
+  let sum = 0;
+  return nums.map(num=>sum+=num);
+};
+
+console.log(runningSum([1, 2, 3, 4])); // [1, 3, 6, 10]
+console.log(runningSum([1, 1, 1, 1])); // [1, 2, 3, 4]
