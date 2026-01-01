@@ -400,10 +400,66 @@
 //   return nums.map(num => sum += num);
 // };
 
-let runningSum = (nums) => {
-  let sum = 0;
-  return nums.map(num=>sum+=num);
-};
+// let runningSum = (nums) => {
+//   let sum = 0;
+//   return nums.map(num=>sum+=num);
+// };
 
-console.log(runningSum([1, 2, 3, 4])); // [1, 3, 6, 10]
-console.log(runningSum([1, 1, 1, 1])); // [1, 2, 3, 4]
+// console.log(runningSum([1, 2, 3, 4])); // [1, 3, 6, 10]
+// console.log(runningSum([1, 1, 1, 1])); // [1, 2, 3, 4]
+
+// ===========================================
+
+// 1672. Richest Customer Wealth - Day - 1
+let maxWealth = (account) => Math.max(...account.map(customer=>customer.reduce((sum,bank)=>sum+bank,0)));
+
+console.log(maxWealth([[3,7],[7,8],[9,5]]));
+
+// 258. Add Digits - Day - 10
+// let addDigits = function(num) {
+//     if (num===0) return 0;
+//     return 1+(num-1)%9;
+// };
+
+// function addDigits(num) {
+//     if (num===0) return 0;
+//     return 1+(num-1)%9;
+// };
+
+// function addDigits(num) {
+//   while (num>=10) {
+//       let sum = 0;
+//       let temp = num;
+      
+//       while (temp>0) {
+//           sum += temp%10;
+//           temp = Math.floor(temp/10);
+//       }
+//       num = sum;
+//   }
+//   return num;
+// };
+
+// console.log(addDigits(12345));
+
+// 2667. Create Hello World - Day - 5
+// let HelloWorld = () => () => "Hello World";
+
+// let word = createHelloWorld();
+// console.log(word());
+
+// 2620. Counter - Day - 5
+// let createCounter = (n) => () => n++;
+
+// let counter = createCounter(8);
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// 1480. Running Sum 1d Array - Day - 2
+// const runningSum = (nums) => {
+//   let sum = 0;
+//   return nums.map(num=>sum+=num);
+// };
+// console.log(runningSum([1,2,3,4]));
