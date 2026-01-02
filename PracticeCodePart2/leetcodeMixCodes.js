@@ -411,9 +411,9 @@
 // ===========================================
 
 // 1672. Richest Customer Wealth - Day - 1
-let maxWealth = (account) => Math.max(...account.map(customer=>customer.reduce((sum,bank)=>sum+bank,0)));
+// let maxWealth = (account) => Math.max(...account.map(customer=>customer.reduce((sum,bank)=>sum+bank,0)));
 
-console.log(maxWealth([[3,7],[7,8],[9,5]]));
+// console.log(maxWealth([[3,7],[7,8],[9,5]]));
 
 // 258. Add Digits - Day - 10
 // let addDigits = function(num) {
@@ -463,3 +463,53 @@ console.log(maxWealth([[3,7],[7,8],[9,5]]));
 //   return nums.map(num=>sum+=num);
 // };
 // console.log(runningSum([1,2,3,4]));
+
+// ========================================================
+
+// 412. FizzBuzz - Day - 1
+// const fizzBuzz = (n) => 
+//   Array.from({length:n}, (_, i) => {
+//       const x = i + 1;
+//       return x % 3 === 0 && x % 5 === 0 ? "FizzBuzz":
+//         x % 3 === 0 ? "Fizz":
+//         x % 5 === 0 ? "Buzz":
+//         String(x);
+//   });
+
+// console.log(fizzBuzz(15));
+
+// 258 add digits - day 11
+// let addDigits = (nums) => {
+//     if (nums === 0) return 0;
+//     return 1+(nums-1)%9;
+// };
+
+// console.log(addDigits(11232))
+
+// 2667 create hello world - day 6
+// let createHelloWorld = () => () => "Hello World";
+
+// let word = createHelloWorld();
+// console.log(word());
+
+// 2620 counter - day 6
+// let createCounter = (n) => () => n++;
+
+// let counter = createCounter(8);
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// 1480 running sum - day 3
+// let runningSum = (nums) => {
+//   let sum = 0;
+//   return nums.map(num=>sum+=num);
+// };
+
+// console.log(runningSum([1,2,3,4]));
+
+// 1672 richest customer - day 2
+// let maxWealth = (accounts) =>
+//   Math.max(...accounts.map(customer=>customer.reduce((sum, bank) => sum+bank, 0)));
+//   console.log(maxWealth([[5,6],[4,8],[6,8]]));
