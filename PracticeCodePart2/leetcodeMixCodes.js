@@ -513,3 +513,55 @@
 // let maxWealth = (accounts) =>
 //   Math.max(...accounts.map(customer=>customer.reduce((sum, bank) => sum+bank, 0)));
 //   console.log(maxWealth([[5,6],[4,8],[6,8]]));
+
+// =====================================================
+
+// add digits day 12
+
+// hello world day 7
+
+// counter day 7
+
+// running sum day 4
+
+// richest customer day 3
+
+// fizzbuzz day 2
+
+// let addDigits = (num) => {
+//     if(num===0) return 0;
+//     return 1+(num-1)%9;
+// };
+// console.log(addDigits(818));
+
+// let createHelloWorld = () => () => "Hello World";
+// let word = createHelloWorld();
+// console.log(word());
+
+// let createCounter = (n) => () => n++;
+// let counter = createCounter(7);
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// let runningSum = (nums) => {
+//     let sum = 0;
+//     return nums.map(num=>sum+=num);
+// };
+// console.log(runningSum([1,2,3,4]));
+
+// let maxWealth = (accounts) =>
+// Math.max(...accounts.map(customer=>customer.reduce((sum,bank)=>sum+bank,0)));
+// console.log(maxWealth([[5,4],[3,7],[3,8]]))
+
+// let fizzBuzz = (n) =>
+// Array.from({length:n}, (_, i) => {
+//     let x = i + 1;
+//     return x%3===0 && x%5===0 ? "FizzBuzz":
+//     x%3===0 ? "Fizz":
+//     x%5===0 ? "Buzz":
+//     String(x);
+// });
+// console.log(fizzBuzz(15));
