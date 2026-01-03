@@ -530,6 +530,8 @@
 
 // number steps to zero day 1
 
+// middle of the linked list day 1
+
 // let addDigits = (num) => {
 //     if(num===0) return 0;
 //     return 1+(num-1)%9;
@@ -568,12 +570,23 @@
 // });
 // console.log(fizzBuzz(15));
 
-let numberSteps = (num) => {
-  let steps = 0;
-  while(num>0) {
-    num = num%2===0 ? num/2 : num-1;
-    steps++;
-  }
-  return steps;
-};
-console.log(numberSteps(123));
+// let numberSteps = (num) => {
+//   let steps = 0;
+//   while(num>0) {
+//     num = num%2===0 ? num/2 : num-1;
+//     steps++;
+//   }
+//   return steps;
+// };
+// console.log(numberSteps(123));
+
+// const middleNode = (head) => {
+//   let slow = head;
+//   let fast = head;
+
+//   while(fast && fast.next) {
+//     slow = slow.next;
+//     fast = fast.next.next;
+//   }
+//   return slow;
+// };
