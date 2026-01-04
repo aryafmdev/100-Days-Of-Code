@@ -590,3 +590,77 @@
 //   }
 //   return slow;
 // };
+
+// =================================================================
+
+// middle of the linked list day 2
+
+// number steps to reduce to zero day 2
+
+// fizzbuzz day 3
+
+// richest customer wealth day 4
+
+// running sum of array day 5
+
+// create counter day 8
+
+// create hello world day 8
+
+// Add Digits day 13
+
+// let middleNode = (head) => {
+//   let slow = head;
+//   let fast = head;
+  
+//   while(fast&&fast.next) {
+//       slow = slow.next;
+//       fast = fast.next.next;
+//   }
+//   return slow;
+// };
+
+// let numberSteps = (num) => {
+//   let steps = 0;
+    
+//   while(num>0) {
+//       num = num%2===0 ? num/2 : num-1;
+//       steps++;
+//   }
+//   return steps;
+// };
+// console.log(numberSteps(123));
+
+// let fizzBuzz = (n) => Array.from({length:n}, (_, i) => {
+//   let x = i + 1;
+//   return x%3===0&&x%5===0 ? "FizzBuzz":
+//   x%3===0? "Fizz":
+//   x%5===0? "Buzz":
+//   String(x);
+// });
+// console.log(fizzBuzz(15))
+
+// let maxWealth = (accounts) => Math.max(...accounts.map(customer=>customer.reduce((sum,bank)=>sum+bank,0)));
+// console.log(maxWealth([[4,5],[4,4],[5,6]]));
+
+// let runningSum = (nums) => {
+//   let sum = 0;
+//   return nums.map(num=>sum+=num);
+// };
+// console.log(runningSum([1,2,3,4]));
+
+// let createCounter = (n) => () => n++;
+// let counter = createCounter(9);
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// let createHelloWorld = () => () => "Hello Sayang"
+// let word = (createHelloWorld());
+// console.log(word());
+
+// let addDigits = (num) => {
+//   if(num===0) return 0;
+//   return 1+(num-1)%9; // using root digit formula
+// };
+// console.log(addDigits(83))
