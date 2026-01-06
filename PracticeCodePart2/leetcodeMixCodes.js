@@ -665,6 +665,77 @@
 // };
 // console.log(addDigits(83))
 
+// ==================================================================
+
+// middle of the linked list day 3
+
+// number of steps to reduce day 3
+
+// fizzbuzz day 4
+
+// richest customer day 5
+
+// running sum day 6
+
+// counter day 9
+
+// create hello world day 9
+
+// add digits day 14
+
+// const middleNode = (head) => {
+//     let slow = head;
+//     let fast = head;
+    
+//     while (fast & fast.next) {
+//         slow = slow.next;
+//         fast = fast.next.next;
+//     }
+//     return slow;
+// };
+
+// let numberSteps = (num) => {
+//     let steps = 0;
+//     while (num>0) {
+//     num = num%2===0 ? num/2 : num-1;
+//     steps++;
+//     }
+//     return steps;
+// };
+// console.log(numberSteps(123));
+
+// let fizzBuzz = (n) => 
+//   Array.from({length:n}, (_, i) => {
+//       let x = i + 1;
+//       return x%3===0 && x%5===0 ? "FizzBuzz":
+//       x%3===0 ? "Fizz":
+//       x%5===0 ? "Buzz":
+//       String(x);
+//   });
+// console.log(fizzBuzz(15));
+
+// let maxWealth = (accounts) =>
+// Math.max(...accounts.map(customer=>customer.reduce((sum,bank) => sum+=bank, 0)));
+// console.log(maxWealth([[5,5],[6,7],[8,9]]));
+
+// let runningSum = (nums) => {
+//     let sum = 0;
+//     return nums.map(num=>sum+=num)
+// };
+// console.log(runningSum([1,2,3,4]));
+
+// let createCounter = (n) => () => n++;
+// let counter = createCounter(9);
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// let createHelloWorld = () => () => "Hello World";
+// let word = createHelloWorld();
+// console.log(word());
+
+// ==========================================================
+
 // Definisi fungsi canConstruct (versi ES6 idiomatic dengan Map)
 const canConstruct = (ransomNote, magazine) => {
   // step 1 : buat peta frekuensi karakter dari magazine
