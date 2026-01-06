@@ -752,33 +752,181 @@
 
 // ==========================================================
 
-// Definisi fungsi canConstruct (versi ES6 idiomatic dengan Map)
-const canConstruct = (ransomNote, magazine) => {
-  // step 1 : buat peta frekuensi karakter dari magazine
-  const charCount = new Map();
-  // step 2 : hitung jumlah setiap karakter dari magazine
-  for (const char of magazine) {
-    // Jika karakter sudah ada → tambah jumlahnya 
-    // Jika belum ada → inisialisasi dengan 1
-    charCount.set(char, (charCount.get(char) || 0) + 1);
-  }
+// // Definisi fungsi canConstruct (versi ES6 idiomatic dengan Map)
+// const canConstruct = (ransomNote, magazine) => {
+//   // step 1 : buat peta frekuensi karakter dari magazine
+//   const charCount = new Map();
+//   // step 2 : hitung jumlah setiap karakter dari magazine
+//   for (const char of magazine) {
+//     // Jika karakter sudah ada → tambah jumlahnya 
+//     // Jika belum ada → inisialisasi dengan 1
+//     charCount.set(char, (charCount.get(char) || 0) + 1);
+//   }
 
-  // step 3 : iterasi setiap karakter di ransomnote
-  for (const char of ransomNote) {
-    // jika karakter tidak ada di magazine atau jumlahnya 0 => gagal
-    if (!charCount.has(char) || charCount.get(char) === 0) {
-      return false;
-    }
-    // jika karakter tersedia => kurangi jumlahnya (karakter dipakai sekali)
-    charCount.set(char, charCount.get(char) - 1);
-  }
+//   // step 3 : iterasi setiap karakter di ransomnote
+//   for (const char of ransomNote) {
+//     // jika karakter tidak ada di magazine atau jumlahnya 0 => gagal
+//     if (!charCount.has(char) || charCount.get(char) === 0) {
+//       return false;
+//     }
+//     // jika karakter tersedia => kurangi jumlahnya (karakter dipakai sekali)
+//     charCount.set(char, charCount.get(char) - 1);
+//   }
   
-  // step 4 : jika semua karakter ransomNote terpenuhi => berhasil
-  return true;
-};
+//   // step 4 : jika semua karakter ransomNote terpenuhi => berhasil
+//   return true;
+// };
 
-// Contoh penggunaan dan menampilkan hasil ke console
-console.log(canConstruct("a", "b"));          // false → 'a' tidak ada di 'b'
-console.log(canConstruct("aa", "ab"));        // false → hanya ada 1 'a' di 'ab'
-console.log(canConstruct("aa", "aab"));       // true  → ada cukup 'a' di 'aab'
-console.log(canConstruct("abc", "cbaabc"));   // true  → semua karakter tersedia
+// // Contoh penggunaan dan menampilkan hasil ke console
+// console.log(canConstruct("a", "b"));          // false → 'a' tidak ada di 'b'
+// console.log(canConstruct("aa", "ab"));        // false → hanya ada 1 'a' di 'ab'
+// console.log(canConstruct("aa", "aab"));       // true  → ada cukup 'a' di 'aab'
+// console.log(canConstruct("abc", "cbaabc"));   // true  → semua karakter tersedia
+
+// ==================================================================
+
+// const canConstruct = (ransomNote, magazine) => {
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char) || 0) +1);
+//     }
+//     for (const char of ransomNote) {
+//         if(!charCount.has(char) || charCount.get(char) === 0) {
+//             return false;
+//         }
+//         charCount.set(char, charCount.get(char) - 1);
+//     }
+//     return true;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char) || 0) + 1);
+//     };
+//     for (const char of ransomNote) {
+//         if (!charCount.has(char) || charCount.get(char) === 0) {
+//             return false;
+//         };
+//         charCount.set(char, charCount.get(char) - 1);
+//     };
+//     return true;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char) || 0) + 1);
+//     };
+//     for (const char of ransomNote) {
+//         if (!charCount.has(char) || charCount.get(char) === 0) {
+//             return false;
+//         };
+//         charCount.set(char, charCount.get(char) - 1);
+//     };
+//     return true;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char) || 0) + 1);
+//     }
+//     for (const char of ransomNote) {
+//         if (!charCount.has(char) || charCount.get(char)===0) {
+//             return false;
+//         }
+//         charCount.set(char, charCount.get(char) - 1);
+//     }
+//     return true;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char) || 0) + 1);
+//     }
+//     for (const char of ransomNote) {
+//         if(!charCount.has(char) || charCount.get(char) === 0) {
+//             return false;
+//         }
+//         charCount.set(char, charCount.get(char) - 1);
+//     }
+//     return true;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char) || 0) + 1);
+//     }
+//     for (const char of ransomNote) {
+//         if (!charCount.has(char) || charCount.get(char) === 0) {
+//             return false;
+//         }
+//         charCount.set(char, charCount.get(char) - 1);
+//     }
+//     return true;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char) || 0) + 1);
+//     }
+//     for (const char of ransomNote) {
+//         if (!charCount.has(char) || charCount.get(char) === 0) {
+//             return false;
+//         }
+//         charCount.set(char, charCount.get(char) - 1);
+//     }
+//     return true;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char) || 0) + 1);
+//     }
+//     for (const char of ransomNote) {
+//         if (!charCount.has(char) || charCount.get(char)===0) {
+//             return false;
+//         }
+//         charCount.set(char, charCount.get(char) - 1);
+//     }
+//     return true;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char) || 0) + 1);
+//     }
+//     for (const char of ransomNote) {
+//         if (!charCount.has(char) || charCount.get(char)===0) {
+//             return false;
+//         }
+//         charCount.set(char, charCount.get(char) - 1);
+//     }
+//     return true;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char) || 0) + 1);
+//     }
+//     for (const char of ransomNote) {
+//     if (!charCount.has(char) || charCount.get(char)===0) {
+//         return false};
+//     charCount.set(char, charCount.get(char) - 1);
+//     }
+//     return true;
+// };
+
+// console.log(canConstruct("a", "b"));          // false → 'a' tidak ada di 'b'
+// console.log(canConstruct("aa", "ab"));        // false → hanya ada 1 'a' di 'ab'
+// console.log(canConstruct("aa", "aab"));       // true  → ada cukup 'a' di 'aab'
+// console.log(canConstruct("abc", "cbaabc"));   // true  → semua karakter tersedia
+
+// ====================================================================
