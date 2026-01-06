@@ -734,6 +734,22 @@
 // let word = createHelloWorld();
 // console.log(word());
 
+// const canConstruct = (ransomNote, magazine) => {
+//   const charCount = new Map();
+//   for (const char of magazine) {
+//       charCount.set(char, (charCount.get(char) || 0) +1);
+//   }
+//   for (const char of ransomNote) {
+//       if(!charCount.has(char) || charCount.get(char) === 0) {
+//           return false;
+//       }
+//       charCount.set(char, charCount.get(char) -1);
+//   }
+//   return true;
+// };
+// console.log(canConstruct("aa", "ab"));
+// console.log(canConstruct("aa", "aba"));
+
 // ==========================================================
 
 // Definisi fungsi canConstruct (versi ES6 idiomatic dengan Map)
