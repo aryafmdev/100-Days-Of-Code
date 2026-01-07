@@ -687,7 +687,7 @@
 //     let slow = head;
 //     let fast = head;
     
-//     while (fast & fast.next) {
+//     while (fast && fast.next) {
 //         slow = slow.next;
 //         fast = fast.next.next;
 //     }
@@ -1124,3 +1124,111 @@
 // console.log(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1])); // Output: 2
 
 // =====================================================================
+
+// max consecutive ones day 1 done
+
+// ransom note day 2 done
+
+// middle of the linked list day 4 done
+
+// number of steps to reduce day 4 done
+
+// fizzbuzz day 5 done
+
+// richest customer day 6 done
+
+// running sum day 7 done
+
+// counter day 10 done
+
+// create hello world day 10 done
+
+// add digits day 15 done
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (const num of nums) {
+//         if (num===1) {
+//             currentCount++;
+//             maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+// console.log(findMaxConsecutiveOnes([1,1,1,0,0,1,1]));
+
+// const canConstruct = (ransomNote, magazine) => {
+//   let charCount = new Map();
+//   for (const char of magazine) {
+//       charCount.set(char, (charCount.get(char)||0)+1);
+//   }
+//   for (const char of ransomNote) {
+//       if (!charCount.has(char) || charCount.get(char)===0) {
+//           return false;
+//       }
+//       charCount.set(char, charCount.get(char)-1);
+//   }
+//   return true;
+// }
+// console.log(canConstruct("aa", "ab"));
+// console.log(canConstruct("aa", "aba"));
+
+// const middleList = (head) => {
+//     let slow = head;
+//     let fast = head;
+//     while(fast && fast.next) {
+//         slow = slow.next;
+//         fast = fast.next.next;
+//     }
+//     return slow;
+// };
+
+// let numberSteps = (num) => {
+//     let steps = 0;
+//     while(num>0) {
+//         num = num%2===0 ? num/2 : num-1;
+//         steps++;
+//     }
+//     return steps;
+// }
+// console.log(numberSteps(123));
+
+// let fizzBuzz = (n) =>
+//   Array.from({length:n}, (_, i) => {
+//       let x = i + 1;
+//       return x%3===0 && x%5===0 ? "FizzBuzz":
+//       x%3===0 ? "Fizz":
+//       x%5===0 ? "Buzz":
+//       String(x);
+//   })
+//   console.log(fizzBuzz(15));
+
+// let maxWealth = (accounts) =>
+//   Math.max(...accounts.map(customer=>customer.reduce((sum, bank) => sum+=bank, 0)));
+//   console.log(maxWealth([[4,5],[5,6],[6,4]]));
+
+// let runningSum = (nums) => {
+  //     let sum = 0;
+  //     return nums.map(num=>sum+=num);
+  // };
+  // console.log(runningSum([1,2,3,4]));
+
+// let addDigits = (num) => {
+//     let sum = 0;
+//     // root digit formula
+//     return 1+(num-1)%9;
+// };
+// console.log(addDigits(81));
+
+// let createHelloWorld = () => () => "Hello World";
+// let word= createHelloWorld();
+// console.log(word());
+
+// let createCounter = (n) => () => n++;
+// let counter = createCounter(90);
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
