@@ -930,3 +930,197 @@
 // console.log(canConstruct("abc", "cbaabc"));   // true  → semua karakter tersedia
 
 // ====================================================================
+
+// /**
+//  * Fungsi untuk mencari jumlah maksimum '1' berturut-turut dalam array biner.
+//  * @param {number[]} nums - Array berisi angka 0 dan 1.
+//  * @returns {number} - Panjang maksimum urutan '1' berturut-turut.
+//  */
+// const findMaxConsecutiveOnes = (nums) => {
+//   // Variabel untuk menyimpan hasil maksimum sepanjang iterasi
+//   let maxCount = 0;
+
+//   // Variabel untuk menghitung jumlah '1' berturut-turut saat ini
+//   let currentCount = 0;
+
+//   // Looping setiap elemen dalam array
+//   for (const num of nums) {
+//     if (num === 1) {
+//       // Jika elemen adalah '1', tambahkan ke hitungan saat ini
+//       currentCount++;
+
+//       // Update hasil maksimum jika hitungan saat ini lebih besar
+//       maxCount = Math.max(maxCount, currentCount);
+//     } else {
+//       // Jika elemen adalah '0', reset hitungan berturut-turut
+//       currentCount = 0;
+//     }
+//   }
+
+//   // Kembalikan hasil maksimum
+//   return maxCount;
+// };
+
+// // 🔎 Contoh penggunaan:
+// console.log(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1])); // Output: 3
+// console.log(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1])); // Output: 2
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (const num of nums) {
+//         if (num===1) {
+//             currentCount++;
+//             maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+
+//     for (const num of nums) {
+//         if (num===1) {
+//             currentCount++;
+//             maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (const num of nums) {
+//         if (num===1) {
+//             currentCount++;
+//             maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (const num of nums) {
+//         if (num===1) {
+//             currentCount++;
+//             maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (const num of nums) {
+//         if (num===1) {
+//             currentCount++;
+//             maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (const num of nums) {
+//         if (num===1) {
+//             currentCount++;
+//             maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (const num of nums) {
+//         if (num === 1) {
+//             currentCount++;
+//             maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (const num of nums) {
+//         if (num===1) {
+//             currentCount++;
+//             maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (const num of nums) {
+//         if (num===1) {
+//             currentCount++;
+//             maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (const num of nums) {
+//         if (num===1) {
+//             currentCount++;
+//             maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     }
+//     return maxCount;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (const num of nums) {
+//         if (num===1) {
+//         currentCount++;
+//         maxCount = Math.max(maxCount, currentCount);
+//         } else {
+//             currentCount = 0;
+//         }
+//     } 
+//     return maxCount;
+// };
+
+// console.log(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1])); // Output: 3
+// console.log(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1])); // Output: 2
+
+// =====================================================================
