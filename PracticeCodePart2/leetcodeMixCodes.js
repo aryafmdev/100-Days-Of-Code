@@ -1282,3 +1282,18 @@
 // };
 
 // console.log(numberSteps(123));
+
+// ================================================
+
+// 977. Squares of Sorted Array
+// const sortedSquares = (nums) => {
+//   const squares = nums.map(num=>num**2);
+//   const sorted = squares.sort((a,b)=>a-b);
+//   return sorted;
+// };
+
+// const sortedSquares = (nums) => {
+//   return nums.map(num=>num**2).sort((a,b)=>a-b);
+// };
+
+// console.log(sortedSquares([-2,4,1,3,2]));
