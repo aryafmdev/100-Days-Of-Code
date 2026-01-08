@@ -1232,3 +1232,53 @@
 // console.log(counter());
 // console.log(counter());
 // console.log(counter());
+
+// ======================================================================
+
+// const middleNode = (head) => {
+//   let slow = head;
+//   let fast = head;
+//   while(fast&&fast.next) {
+//       slow = slow.next;
+//       fast = fast.next.next;
+//   }
+//   return slow;
+// };
+
+// const createHelloWorld = () => () => "Hello World";
+// let word = createHelloWorld();
+// console.log(word()); 
+
+// const canConstruct = (ransomNote, magazine) => {
+  //     const charCount = new Map();
+  //     for (const char of magazine) {
+  //         charCount.set(char, (charCount.get(char)||0)+1);
+  //     }
+  //     for (const char of ransomNote) {
+  //         if (!charCount.has(char) || charCount.get(char)===0) {
+  //             return false;
+  //         }
+  //         charCount.set(char, charCount.get(char)-1);
+  //     }
+  //     return true;
+  // };
+  
+  // console.log(canConstruct("aa","ab"));
+  // console.log(canConstruct("aa","aba"));
+
+  // const runningSum = (nums) => {
+    //     let sum = 0;
+    //     return nums.map(num=>sum+=num);
+    // };
+    // console.log(runningSum([1,2,3,4]));
+
+// const numberSteps = (num) => {
+//     let steps = 0;
+//     while (num>0) {
+//         num = num%2===0 ? num/2 : num-1;
+//         steps++;
+//     }
+//     return steps;
+// };
+
+// console.log(numberSteps(123));
