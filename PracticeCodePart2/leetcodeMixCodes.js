@@ -1411,25 +1411,191 @@
  * Idiomatic ES6 solution: readable, maintainable, and performant
  * Time Complexity: O(n), Space Complexity: O(1) (in-place)
  */
-// const duplicateZeros = (arr) => {
-//   // Step 1: Hitung jumlah zero yang ada di array
-//   let zeros = arr.reduce((count, num) => count + (num === 0 ? 1 : 0), 0);
+const duplicateZeros = (arr) => {          // Deklarasi fungsi dengan parameter array input
+  const n = arr.length;                    // Simpan panjang asli array agar tidak berubah
+  const result = [];                       // Buat array sementara untuk menampung hasil transformasi
 
-//   // Step 2: Traverse dari belakang agar tidak overwrite data yang belum diproses
-//   for (let i = arr.length - 1; i >= 0; i--) {
-//     // Geser elemen ke posisi baru jika masih dalam batas array
-//     if (i + zeros < arr.length) arr[i + zeros] = arr[i];
+  for (let i = 0; i < n; i++) {            // Loop dari indeks 0 sampai n-1
+    // salin elemen asli jika masih muat
+    if (result.length < n) result.push(arr[i]);   // Tambahkan elemen ke result jika belum penuh
+    // duplikasi nol jika masih muat
+    if (arr[i] === 0 && result.length < n) {      // Jika elemen adalah 0 dan masih ada ruang
+      result.push(0);                             // Tambahkan satu nol ekstra (duplikasi)
+    }
+  }
 
-//     // Step 3: Jika elemen adalah zero, duplikasikan
-//     if (arr[i] === 0) {
-//       zeros--; // satu zero sudah diproses
-//       // Tambahkan duplikasi zero jika masih dalam batas array
-//       if (i + zeros < arr.length) arr[i + zeros] = 0;
+  // salin balik ke array asli
+  for (let i = 0; i < n; i++) {            // Loop lagi dari 0 sampai n-1
+    arr[i] = result[i];                    // Copy elemen dari result ke array asli (in-place overwrite)
+  }
+};
+
+// Contoh penggunaan
+let arr = [1, 0, 2, 3, 0, 4, 5, 0];
+console.log("Sebelum:", [...arr]); // tampilkan array sebelum diproses
+duplicateZeros(arr); // panggil fungsi
+console.log("Sesudah:", arr); // tampilkan array setelah diproses
+
+// =============================================
+
+// const duplicateZeros = (arr) => {          
+//   const n = arr.length;                    
+//   const result = [];                      
+//   for (let i = 0; i < n; i++) {           
+//     if (result.length < n) result.push(arr[i]);  
+//     if (arr[i] === 0 && result.length < n) {      
+//       result.push(0);                            
 //     }
 //   }
+//   for (let i = 0; i < n; i++) {           
+//     arr[i] = result[i];                   
+//   }
 // };
+
+// const duplicateZeros = (arr) => {
+//     const n = arr.length;
+//     const result = [];
+    
+//     for (let i = 0; i < n; i++) {
+//         if (result.length < n) result.push(arr[i]);
+//         if (arr[i] === 0 && result.length < n) {
+//             result.push(0);
+//         }
+//     }
+//     for (let i = 0; i < n; i++) {
+//         arr[i] = result[i];
+//     }
+// };
+
+// const duplicateZeros = (arr) => {
+//     const n = arr.length;
+//     const result = [];
+//     for (let i = 0; i < n; i++) {
+//         if (result.length < n) result.push(arr[i]);
+//         if (arr[i] === 0 && result.length < n) {
+//             result.push(0);
+//         }
+//     }
+//     for (let i = 0; i < n; i++) {
+//         arr[i] = result[i];
+//     }
+// };
+
+// const duplicateZeros = (arr) => {
+//     const n = arr.length;
+//     const result = [];
+//     for (let i = 0; i < n; i++) {
+//         if (result.length < n) result.push(arr[i]);
+//         if (arr[i]===0 && result.length < n) {
+//             result.push(0);
+//         }
+//     }
+//     for (let i = 0; i < n; i++) {
+//         arr[i] = result[i];
+//     }
+// };
+
+// const duplicateZeros = (arr) => {
+//     const n = arr.length;
+//     const result = [];
+//     for (let i = 0; i < n; i++) {
+//         if (result.length < n) result.push(arr[i]);
+//         if (arr[i]===0 && result.length < n) {
+//             result.push(0);
+//         }
+//     }
+//     for (let i = 0; i < n; i++) {
+//         arr[i] = result[i];
+//     }
+// };
+
+// const duplicateZeros = (arr) => {
+//     const n = arr.length;
+//     const result = [];
+//     for (let i = 0; i < n; i++) {
+//         if (result.length < n) result.push(arr[i]);
+//         if (arr[i]===0 && result.length < n) {
+//             result.push(0);
+//         }
+//     }
+//     for (let i = 0; i < n; i++) {
+//         arr[i] = result[i];
+//     }
+// };
+
+// const duplicateZeros = (arr) => {
+//     const n = arr.length;
+//     const result = [];
+//     for (let i = 0; i < n; i++) {
+//         if (result.length < n) result.push(arr[i]);
+//         if (arr[i] === 0 && result.length < n) {
+//             result.push(0);
+//         }
+//     }
+//     for (let i = 0; i < n; i++) {
+//         arr[i] = result[i]
+//     }
+// };
+
+// const duplicateZeros = (arr) => {
+//     const n = arr.length;
+//     const result = [];
+//     for (let i = 0; i < n; i++) {
+//         if (result.length < n) result.push(arr[i]);
+//         if (arr[i]===0 && result.length < n) {
+//             result.push(0);
+//         }
+//     }
+//     for (let i = 0; i < n; i++) {
+//         arr[i] = result[i];
+//     }
+// };
+
+// const duplicateZeros = (arr) => {
+//     const n = arr.length;
+//     const result = [];
+//     for (let i = 0; i < n; i++) {
+//         if (result.length < n) result.push(arr[i]);
+//         if (arr[i]===0 && result.length < n) {
+//             result.push(0);
+//         }
+//     }
+//     for (let i = 0; i < n; i++) {
+//         arr[i] = result[i];
+//     }
+// };
+
+// const duplicateZeros = (arr) => {
+//     const n = arr.length;
+//     const result = [];
+//     for (let i = 0; i < n; i++) {
+//         if (result.length < n) result.push(arr[i]);
+//         if (arr[i] === 0 && result.length < n) {
+//             result.push(0);
+//         }
+//     }
+//     for (let i = 0; i < n; i++) {
+//         arr[i] = result[i]
+//     }
+// };
+
+// const duplicateZeros = (arr) => {
+//     const n = arr.length;
+//     const result = [];
+//     for (let i = 0; i < n; i++) {
+//         if (result.length < n) result.push(arr[i]);
+//         if (arr[i]===0 && result.length < n) {
+//             result.push(0);
+//         }
+//     }
+//     for (let i = 0; i < n; i++) {
+//         arr[i] = result[i];
+//     }
+// }
+
 // // Contoh penggunaan
 // let arr = [1, 0, 2, 3, 0, 4, 5, 0];
-// console.log("Sebelum:", [...arr]); // tampilkan array sebelum diproses
+// console.log([...arr]); // tampilkan array sebelum diproses
 // duplicateZeros(arr); // panggil fungsi
-// console.log("Sesudah:", arr); // tampilkan array setelah diproses
+// console.log(arr); // tampilkan array setelah diproses
+// ========================================================
