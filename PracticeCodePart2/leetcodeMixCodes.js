@@ -1297,3 +1297,28 @@
 // };
 
 // console.log(sortedSquares([-2,4,1,3,2]));
+
+// ===============================================================
+
+/**
+ * LeetCode #1089 - Duplicate Zeros
+ * Idiomatic ES6 solution: readable, maintainable, and performant
+ * Time Complexity: O(n), Space Complexity: O(1) (in-place)
+ */
+const duplicateZeros = (arr) => {
+  // Step 1: Hitung jumlah zero yang ada di array
+  let zeros = arr.reduce((count, num) => count + (num === 0 ? 1 : 0), 0);
+
+  // Step 2: Traverse dari belakang agar tidak overwrite data yang belum diproses
+  for (let i = arr.length - 1; i >= 0; i--) {
+    // Geser elemen ke posisi baru jika masih dalam batas array
+    if (i + zeros < arr.length) arr[i + zeros] = arr[i];
+
+    // Step 3: Jika elemen adalah zero, duplikasikan
+    if (arr[i] === 0) {
+      zeros--; // satu zero sudah diproses
+      // Tambahkan duplikasi zero jika masih dalam batas array
+      if (i + zeros < arr.length) arr[i + zeros] = 0;
+    }
+  }
+};
