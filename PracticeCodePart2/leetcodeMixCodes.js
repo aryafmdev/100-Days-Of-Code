@@ -1300,25 +1300,136 @@
 
 // ===============================================================
 
+
+
+// =============================================
+
+// 977. Squares of Sorted Array
+// const sortedSquares = (nums) => {
+//   return nums.map(num=>num*num).sort((a,b)=>a-b);
+// };
+// console.log(sortedSquares([-2,1,3,4,2,-1]));
+
+// const findNumbers = (nums) => {
+//   return nums.map(num=>Math.floor(Math.log10(num))+1).filter(len=>len%2===0).length;
+// };
+// console.log(findNumbers([12,345,2,6,7896]));
+
+// const findMaxConsecutiveOnes = (nums) => {
+//   let maxCount = 0;
+//   let currentCount = 0;
+//   for (const num of nums) {
+//       if (num===1) {
+//           currentCount++;
+//           maxCount = Math.max(maxCount, currentCount);
+//       } else {
+//           currentCount = 0;
+//       }
+//   }
+//   return maxCount;
+// };
+// console.log(findMaxConsecutiveOnes([1,1,0,1,1,1]));
+
+// const findMaxConsecutiveOnes = (nums) => {
+//   let maxCount = 0;
+//   let currentCount = 0;
+//   // Loop klasik lebih cepat daripada for...of (kurang overhead iterator)
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] === 1) {
+//       currentCount++;
+//       // Hindari Math.max, pakai comparison langsung
+//       if (currentCount > maxCount) {
+//         maxCount = currentCount;
+//       }
+//     } else {
+//       currentCount = 0;
+//     }
+//   }
+//   return maxCount;
+// };
+// console.log(findMaxConsecutiveOnes([1,1,0,1,1,1]));
+
+// const canConstruct = (ransomNote, magazine) => {
+//   let charCount = new Map();
+//   for (const char of magazine) {
+//       charCount.set(char, (charCount.get(char) || 0)+1);
+//   }
+//   for (const char of ransomNote) {
+//       if (!charCount.has(char) || charCount.get(char)===0) {
+//           return false;
+//       };
+//       charCount.set(char, charCount.get(char)-1);
+//   }
+//   return true;
+// };
+// console.log(canConstruct("aa","ab"));
+// console.log(canConstruct("aa","aba"));
+
+// const middleNode = (head) => {
+//   let slow = head;
+//   let fast = head;
+//   while (fast&&fast.next) {
+//       slow = slow.next;
+//       fast = fast.next.next;
+//   };
+//   return slow;
+// };
+
+// const numberOfSteps = (num) => {
+//   let steps = 0;
+//   while (num>0) {
+//       num = num % 2 === 0 ? num/2 : num-1;
+//       steps++;
+//   }
+//   return steps;
+// };
+// console.log(numberOfSteps(123));
+
+// const fizzBuzz = (n) => 
+//   Array.from({length: n}, (_, i) => {
+//       let x = i + 1;
+//       return x%3===0 && x%5===0 ? "FizzBuzz":
+//       x%3===0 ? "Fizz":
+//       x%5===0 ? "Buzz":
+//       String(x);
+//   });
+// console.log(fizzBuzz(15));
+
+// const maximumWealth = (accounts) =>
+//   Math.max(...accounts.map(customer=>customer.reduce((sum,bank)=>sum+=bank)));
+// console.log(maximumWealth([[1,5],[7,3],[3,5]]));
+
+// const runningSum = (nums) => {
+//   let sum = 0;
+//   return nums.map(num=>sum+=num);
+// };
+// console.log(runningSum([3,1,2,10,1]));
+
+
 /**
  * LeetCode #1089 - Duplicate Zeros
  * Idiomatic ES6 solution: readable, maintainable, and performant
  * Time Complexity: O(n), Space Complexity: O(1) (in-place)
  */
-const duplicateZeros = (arr) => {
-  // Step 1: Hitung jumlah zero yang ada di array
-  let zeros = arr.reduce((count, num) => count + (num === 0 ? 1 : 0), 0);
+// const duplicateZeros = (arr) => {
+//   // Step 1: Hitung jumlah zero yang ada di array
+//   let zeros = arr.reduce((count, num) => count + (num === 0 ? 1 : 0), 0);
 
-  // Step 2: Traverse dari belakang agar tidak overwrite data yang belum diproses
-  for (let i = arr.length - 1; i >= 0; i--) {
-    // Geser elemen ke posisi baru jika masih dalam batas array
-    if (i + zeros < arr.length) arr[i + zeros] = arr[i];
+//   // Step 2: Traverse dari belakang agar tidak overwrite data yang belum diproses
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     // Geser elemen ke posisi baru jika masih dalam batas array
+//     if (i + zeros < arr.length) arr[i + zeros] = arr[i];
 
-    // Step 3: Jika elemen adalah zero, duplikasikan
-    if (arr[i] === 0) {
-      zeros--; // satu zero sudah diproses
-      // Tambahkan duplikasi zero jika masih dalam batas array
-      if (i + zeros < arr.length) arr[i + zeros] = 0;
-    }
-  }
-};
+//     // Step 3: Jika elemen adalah zero, duplikasikan
+//     if (arr[i] === 0) {
+//       zeros--; // satu zero sudah diproses
+//       // Tambahkan duplikasi zero jika masih dalam batas array
+//       if (i + zeros < arr.length) arr[i + zeros] = 0;
+//     }
+//   }
+// };
+// // Contoh penggunaan
+// let arr = [1, 0, 2, 3, 0, 4, 5, 0];
+// console.log("Sebelum:", [...arr]); // tampilkan array sebelum diproses
+// duplicateZeros(arr); // panggil fungsi
+// console.log("Sesudah:", arr); // tampilkan array setelah diproses
