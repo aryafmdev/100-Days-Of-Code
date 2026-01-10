@@ -1411,30 +1411,30 @@
  * Idiomatic ES6 solution: readable, maintainable, and performant
  * Time Complexity: O(n), Space Complexity: O(1) (in-place)
  */
-const duplicateZeros = (arr) => {          // Deklarasi fungsi dengan parameter array input
-  const n = arr.length;                    // Simpan panjang asli array agar tidak berubah
-  const result = [];                       // Buat array sementara untuk menampung hasil transformasi
+// const duplicateZeros = (arr) => {          // Deklarasi fungsi dengan parameter array input
+//   const n = arr.length;                    // Simpan panjang asli array agar tidak berubah
+//   const result = [];                       // Buat array sementara untuk menampung hasil transformasi
 
-  for (let i = 0; i < n; i++) {            // Loop dari indeks 0 sampai n-1
-    // salin elemen asli jika masih muat
-    if (result.length < n) result.push(arr[i]);   // Tambahkan elemen ke result jika belum penuh
-    // duplikasi nol jika masih muat
-    if (arr[i] === 0 && result.length < n) {      // Jika elemen adalah 0 dan masih ada ruang
-      result.push(0);                             // Tambahkan satu nol ekstra (duplikasi)
-    }
-  }
+//   for (let i = 0; i < n; i++) {            // Loop dari indeks 0 sampai n-1
+//     // salin elemen asli jika masih muat
+//     if (result.length < n) result.push(arr[i]);   // Tambahkan elemen ke result jika belum penuh
+//     // duplikasi nol jika masih muat
+//     if (arr[i] === 0 && result.length < n) {      // Jika elemen adalah 0 dan masih ada ruang
+//       result.push(0);                             // Tambahkan satu nol ekstra (duplikasi)
+//     }
+//   }
 
-  // salin balik ke array asli
-  for (let i = 0; i < n; i++) {            // Loop lagi dari 0 sampai n-1
-    arr[i] = result[i];                    // Copy elemen dari result ke array asli (in-place overwrite)
-  }
-};
+//   // salin balik ke array asli
+//   for (let i = 0; i < n; i++) {            // Loop lagi dari 0 sampai n-1
+//     arr[i] = result[i];                    // Copy elemen dari result ke array asli (in-place overwrite)
+//   }
+// };
 
-// Contoh penggunaan
-let arr = [1, 0, 2, 3, 0, 4, 5, 0];
-console.log("Sebelum:", [...arr]); // tampilkan array sebelum diproses
-duplicateZeros(arr); // panggil fungsi
-console.log("Sesudah:", arr); // tampilkan array setelah diproses
+// // Contoh penggunaan
+// let arr = [1, 0, 2, 3, 0, 4, 5, 0];
+// console.log("Sebelum:", [...arr]); // tampilkan array sebelum diproses
+// duplicateZeros(arr); // panggil fungsi
+// console.log("Sesudah:", arr); // tampilkan array setelah diproses
 
 // =============================================
 
@@ -1632,20 +1632,94 @@ console.log("Sesudah:", arr); // tampilkan array setelah diproses
 // };
 
 // versi es6 idiomatic ternary
-const merge = (nums1, m, nums2, n) => {
-  // pointer akhir elemen valid di nums1
-  let i = m - 1, 
-      // pointer akhir elemen valid di nums2
-      j = n - 1, 
-      // pointer akhir gabungan
-      k = m + n - 1;
+// const merge = (nums1, m, nums2, n) => {
+//   // pointer akhir elemen valid di nums1
+//   let i = m - 1, 
+//       // pointer akhir elemen valid di nums2
+//       j = n - 1, 
+//       // pointer akhir gabungan
+//       k = m + n - 1;
 
-  // selama masih ada elemen di nums2
-  while (j >= 0) {
-    // pilih elemen lebih besar antara nums1[i] dan nums2[j]
-    nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) 
-      ? nums1[i--]   // jika nums1[i] lebih besar → taruh di nums1[k], lalu i--
-      : nums2[j--];  // jika tidak → taruh nums2[j] di nums1[k], lalu j--
-  }
-};
+//   // selama masih ada elemen di nums2
+//   while (j >= 0) {
+//     // pilih elemen lebih besar antara nums1[i] dan nums2[j]
+//     nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) 
+//       ? nums1[i--]   // jika nums1[i] lebih besar → taruh di nums1[k], lalu i--
+//       : nums2[j--];  // jika tidak → taruh nums2[j] di nums1[k], lalu j--
+//   }
+// };
 // =====================================================
+
+// const merge = (nums1, m, nums2, n) => {
+//     let i = m-1;
+//     let j = n-1;
+//     let k = m+n-1;
+//     while(j>=0) {
+//         nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//     }
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//     let i=m-1, j=n-1, k=m+n-1;
+//     while (j>=0) {
+//         nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//     }
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//     let i=m-1, j=n-1, k=m+n-1;
+//     while(j>=0) {
+//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--];
+//     }
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//     let i=m-1, j=n-1, k=m+n-1;
+//     while (j>=0) {
+//         nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//     }
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//     let i=m-1, j=n-1, k=m+n-1;
+//     while(j>=0) {
+//         nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//     }
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//     let i=m-1, j=n-1, k=m+n-1;
+//     while(j>=0) {
+//         nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//     }
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//     let i=m-1, j=n-1, k=m+n-1;
+//     while(j>=0) {
+//         nums1[k--] = (i>=0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--];
+//     }
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//     let i=m-1, j=n-1, k=m+n-1;
+//     while (j>=0) {
+//         nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//     }
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//     let i=m-1, j=n-1, k=m+n-1;
+//     while (j>=0) {
+//         nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//     }
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//     let i=m-1, j=n-1, k=m+n-1;
+//     while(j>=0) {
+//         nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//     }
+// };
+
+// ====================================
