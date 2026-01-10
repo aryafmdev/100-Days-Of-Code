@@ -1599,3 +1599,53 @@ console.log("Sesudah:", arr); // tampilkan array setelah diproses
 // duplicateZeros(arr); // panggil fungsi
 // console.log(arr); // tampilkan array setelah diproses
 // ========================================================
+
+/**
+ * Merge Sorted Array (LeetCode #88)
+ * nums1: array utama dengan kapasitas cukup (panjang m+n)
+ * m: jumlah elemen valid di nums1
+ * nums2: array kedua yang akan digabung
+ * n: jumlah elemen valid di nums2
+ */
+
+// versi es6 readability
+// const merge = (nums1, m, nums2, n) => {
+//   // pointer untuk akhir elemen valid di nums1
+//   let i = m - 1;
+//   // pointer untuk akhir elemen valid di nums2
+//   let j = n - 1;
+//   // pointer untuk posisi akhir array gabungan
+//   let k = m + n - 1;
+
+//   // selama masih ada elemen di nums2
+//   while (j >= 0) {
+//     // jika nums1 masih ada elemen dan lebih besar dari nums2
+//     if (i >= 0 && nums1[i] > nums2[j]) {
+//       nums1[k] = nums1[i]; // taruh elemen nums1 di posisi akhir
+//       i--;                 // geser pointer nums1 ke kiri
+//     } else {
+//       nums1[k] = nums2[j]; // taruh elemen nums2 di posisi akhir
+//       j--;                 // geser pointer nums2 ke kiri
+//     }
+//     k--; // geser pointer gabungan ke kiri
+//   }
+// };
+
+// versi es6 idiomatic ternary
+const merge = (nums1, m, nums2, n) => {
+  // pointer akhir elemen valid di nums1
+  let i = m - 1, 
+      // pointer akhir elemen valid di nums2
+      j = n - 1, 
+      // pointer akhir gabungan
+      k = m + n - 1;
+
+  // selama masih ada elemen di nums2
+  while (j >= 0) {
+    // pilih elemen lebih besar antara nums1[i] dan nums2[j]
+    nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) 
+      ? nums1[i--]   // jika nums1[i] lebih besar → taruh di nums1[k], lalu i--
+      : nums2[j--];  // jika tidak → taruh nums2[j] di nums1[k], lalu j--
+  }
+};
+// =====================================================
