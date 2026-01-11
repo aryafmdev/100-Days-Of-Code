@@ -1723,3 +1723,31 @@
 // };
 
 // ====================================
+
+// LeetCode 27: Remove Element
+// Tujuan: hapus semua kemunculan `val` dari `nums` secara in-place,
+// lalu kembalikan jumlah elemen yang bukan `val` (k).
+
+const removeElement = (nums, val) => {
+  let k = 0;                 // pointer tulis: posisi untuk menaruh elemen yang bukan `val`
+
+  // loop satu kali melewati seluruh array (O(n) time, O(1) space)
+  for (let i = 0; i < nums.length; i++) {
+    const curr = nums[i];    // ambil elemen saat ini untuk keterbacaan
+    if (curr !== val) {      // jika elemen bukan `val`, kita pertahankan
+      nums[k] = curr;        // tulis elemen ke posisi `k` (overwrite in-place)
+      k++;                   // geser pointer tulis ke depan
+    }                        // jika elemen adalah `val`, kita abaikan (tidak menulis, tidak menaikkan k)
+  }
+
+  return k;                  // k = jumlah elemen yang bukan `val`; first k elements valid
+};
+
+// Contoh penggunaan:
+let arr = [3, 2, 2, 3];
+let len = removeElement(arr, 3);
+console.log(len, arr.slice(0, len)); // 2 [2, 2]
+
+arr = [0, 1, 2, 2, 3, 0, 4, 2];
+len = removeElement(arr, 2);
+console.log(len, arr.slice(0, len)); // 5 [0, 1, 3, 0, 4]
