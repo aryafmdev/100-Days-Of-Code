@@ -1743,6 +1743,20 @@
 //   return k;                  // k = jumlah elemen yang bukan `val`; first k elements valid
 // };
 
+// LeetCode #27: Remove Element
+// Time: O(n), Space: O(1)
+
+// const removeElement = (nums, val) => {
+//   let k = 0; // pointer untuk posisi tulis
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] !== val) {
+//       nums[k++] = nums[i]; // overwrite hanya jika bukan target
+//     }
+//   }
+//   return k;
+// };
+
+
 // // Contoh penggunaan:
 // let arr = [3, 2, 2, 3];
 // let len = removeElement(arr, 3);
@@ -1775,3 +1789,69 @@ const k = removeDuplicates(nums);
 
 console.log(k);        // 5
 console.log(nums.slice(0, k)); // [0,1,2,3,4]
+
+// const removeDuplicates = (nums) => {
+//     if (!nums.length) return 0;
+//     let k = 1;
+//     for (let i=1; i<nums.length; i++) {
+//         if(nums[i] !== nums[i-1]) {
+//             nums[k++] = nums[i];
+//         }
+//     }
+//     return k;
+// };
+
+// const removeDuplicates = (nums) => {
+//     if(!nums.length) return 0;
+//     let k=1;
+//     for (let i=1; i<nums.length; i++) {
+//         if (nums[i] !== nums[i-1]) {
+//             nums[k++] = nums[i];
+//         }
+//     }
+//     return k;
+// };
+
+// const removeDuplicates = (nums) => {
+//     if(!nums.length) return 0;
+//     let k=1;
+//     for(let i=1; i<nums.length; i++) {
+//         if(nums[i]!==nums[i-1]) {
+//             nums[k++] = nums[i];
+//         }
+//     }
+//     return k;
+// };
+
+// const removeDuplicates = (nums) => {
+//     if(!nums.length) return 0;
+//     let k=1;
+//     for(let i=1; i<nums.length; i++) {
+//         if(nums[i]!==nums[i-1]) {
+//             nums[k++] = nums[i];
+//         }
+//     }
+//     return k;
+// };
+
+// const removeDuplicates = (nums) => {
+//     if(!nums.length) return 0;
+//     let k=1;
+//     for(let i=1; i<nums.length; i++) {
+//         if(nums[i]!==nums[i-1]) {
+//             nums[k++] = nums[i];
+//         }
+//     }
+//     return k;
+// };
+
+// const removeDuplicates = (nums) => {
+//     if(!nums.length) return 0;
+//     let k=1;
+//     for(let i=1; i<nums.length; i++) {
+//         if(nums[i]!==nums[i-1]) {
+//             nums[k++] = nums[i];
+//         }
+//     }
+//     return k;
+// };
