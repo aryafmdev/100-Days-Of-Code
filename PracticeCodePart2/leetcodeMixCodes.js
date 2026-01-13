@@ -1855,3 +1855,67 @@ console.log(nums.slice(0, k)); // [0,1,2,3,4]
 //     }
 //     return k;
 // };
+
+// ============================
+
+// const removeDuplicates = (nums) => {
+//   if (!nums.length) return 0;
+//   let k = 1;
+//   for (let i=1; i<nums.length; i++) {
+//       if (nums[i] !== nums[i-1]) {
+//           nums[k++] = nums[i];
+//       }
+//   }
+//   return k;
+// };
+
+// const removeElement = (nums, val) => {
+//   let k = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       if (nums[i] !== val) {
+//           nums[k++] = nums[i];
+//       }
+//   }
+//   return k;
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//   let i = m-1;
+//   let j = n-1;
+//   let k = m+n-1;
+//   while (j>=0) {
+//       nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//   }
+// };
+
+// const sortedSquares = (nums) => {
+//   return nums.map(num=>num**2).sort((a,b)=>a-b);
+// };
+
+// const findNumbers = (nums) => {
+//   return nums.map(num=>String(num).length).filter(len=>len%2===0).length;
+// };
+
+// const duplicateZeros = (arr) => {
+//   const n = arr.length;
+//   const result = [];
+//   for (let i=0; i<n; i++) {
+//       if (result.length<n) result.push(arr[i]);
+//       if (arr[i]===0 && result.length<n) {
+//           result.push(0);
+//       }
+//   }
+//   for (let i=0; i<n; i++) {
+//       arr[i] = result[i];   
+//   }
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//   let maxCount = 0;
+//   let currentCount = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       currentCount = (nums[i]===1) ? currentCount+1 : 0; 
+//       maxCount = Math.max(maxCount, currentCount);
+//   }
+//   return maxCount;
+// };
