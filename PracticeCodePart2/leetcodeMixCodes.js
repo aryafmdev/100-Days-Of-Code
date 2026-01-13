@@ -1919,3 +1919,59 @@ console.log(nums.slice(0, k)); // [0,1,2,3,4]
 //   }
 //   return maxCount;
 // };
+
+// const runningSum = (nums) => {
+//   let sum = 0;
+//   return nums.map(num=>sum+=num);
+// };
+
+// const addDigits = (num) => {
+//   if (num===0) return 0;
+//   // root digit formula
+//   return 1+(num-1)%9;
+// };
+
+// const maximumWealth = (accounts) => 
+//   Math.max(...accounts.map(customer=>customer.reduce((sum, bank)=>sum+=bank)));
+
+// const fizzBuzz = (n) =>
+//   Array.from({length: n}, (_, i) => {
+//       let x = i+1;
+//       return x%3===0 && x%5===0 ? "FizzBuzz":
+//       x%3===0 ? "Fizz":
+//       x%5===0 ? "Buzz":
+//       String(x);
+//   });
+
+// const numberOfSteps = (num) => {
+//   let steps = 0;
+//   while (num>0) {
+//       num = num%2===0 ? num/2 : num-1;
+//       steps++;
+//   }
+//   return steps;
+// };
+
+// const middleNode = (head) => {
+//   let slow = head;
+//   let fast = head;
+//   while(fast&&fast.next) {
+//       slow = slow.next;
+//       fast = fast.next.next;
+//   }
+//   return slow;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//   let charCount = new Map();
+//   for (const char of magazine) {
+//       charCount.set(char, (charCount.get(char)||0)+1);
+//   };
+//   for (const char of ransomNote) {
+//       if (!charCount.has(char) || charCount.get(char)===0) {
+//           return false;
+//       }
+//       charCount.set(char, charCount.get(char)-1);
+//   };
+//   return true;
+// };
