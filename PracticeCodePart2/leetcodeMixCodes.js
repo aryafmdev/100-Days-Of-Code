@@ -1975,3 +1975,44 @@ console.log(nums.slice(0, k)); // [0,1,2,3,4]
 //   };
 //   return true;
 // };
+
+/**
+ * LeetCode 1346: Check If N and Its Double Exist
+ * Versi looping biasa (nested loop).
+ */
+
+// const checkIfExist = (arr) => {
+//   // Loop pertama: ambil setiap elemen sebagai kandidat n
+//   for (let i = 0; i < arr.length; i++) {
+//     const num = arr[i]; // elemen saat ini
+
+//     // Loop kedua: bandingkan dengan semua elemen lain
+//     for (let j = 0; j < arr.length; j++) {
+//       // Pastikan tidak membandingkan elemen yang sama (i !== j)
+//       if (i !== j && arr[j] === num * 2) {
+//         return true; // Jika ketemu pasangan valid, langsung return true
+//       }
+//     }
+//   }
+
+//   // Jika selesai looping tanpa menemukan pasangan, return false
+//   return false;
+// };
+
+// console.log(checkIfExist([10, 2, 5, 3])); // true (10 = 2 * 5)
+// console.log(checkIfExist([7, 1, 14, 11])); // true (14 = 2 * 7)
+// console.log(checkIfExist([3, 1, 7, 11])); // false
+
+const checkIfExist = (arr) => {
+  for (let i=0; i<arr.length; i++) {
+      let num = arr[i];
+      for (let j=0; j<arr.length; j++) {
+          if (i !== j && arr[j] === num*2) {
+              return true;
+          }
+      }
+  }
+  return false;
+};
+
+// ====================================
