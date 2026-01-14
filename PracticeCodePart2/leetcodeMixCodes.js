@@ -2091,3 +2091,28 @@ console.log(nums.slice(0, k)); // [0,1,2,3,4]
 // };
 
 // ===============================
+
+// LeetCode #941 - Valid Mountain Array
+// Time: O(n), Space: O(1)
+
+const validMountainArray = (arr) => {
+  const n = arr.length;
+  if (n < 3) return false;
+
+  let i = 0;
+
+  // climb up
+  while (i + 1 < n && arr[i] < arr[i + 1]) i++;
+
+  // peak can't be first or last
+  if (i === 0 || i === n - 1) return false;
+
+  // climb down
+  while (i + 1 < n && arr[i] > arr[i + 1]) i++;
+
+  return i === n - 1;
+};
+
+console.log(validMountainArray([2, 5, 3]));      // true
+console.log(validMountainArray([2, 5, 5]));      // false
+console.log(validMountainArray([0, 3, 2, 1]));   // true
