@@ -2003,16 +2003,91 @@ console.log(nums.slice(0, k)); // [0,1,2,3,4]
 // console.log(checkIfExist([7, 1, 14, 11])); // true (14 = 2 * 7)
 // console.log(checkIfExist([3, 1, 7, 11])); // false
 
-const checkIfExist = (arr) => {
-  for (let i=0; i<arr.length; i++) {
-      let num = arr[i];
-      for (let j=0; j<arr.length; j++) {
-          if (i !== j && arr[j] === num*2) {
-              return true;
-          }
-      }
-  }
-  return false;
-};
+// const checkIfExist = (arr) => {
+//   for (let i=0; i<arr.length; i++) {
+//       let num = arr[i];
+//       for (let j=0; j<arr.length; j++) {
+//           if (i !== j && arr[j] === num*2) {
+//               return true;
+//           }
+//       }
+//   }
+//   return false;
+// };
 
 // ====================================
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (let i = 0; i < nums.length; i++) {
+//         currentCount = nums[i] === 1 ? currentCount + 1 : 0;
+//         maxCount = Math.max(maxCount, currentCount);
+//     }
+//     return maxCount;
+// };
+
+// const findNumbers = (nums) => {
+//     // return nums.map(num=>String(num).length).filter(len=>len%2===0).length;
+//     // return nums.map(num=>Math.floor(Math.log10(num))+1).filter(len=>len%2===0).length;
+// };
+
+// const sortedSquares = (nums) => {
+//   return nums.map(num=>num**2).sort((a,b)=>a-b);
+// };
+
+// const duplicateZeros = (arr) => {          
+//   const n = arr.length;                    
+//   const result = [];                      
+//   for (let i = 0; i < n; i++) {           
+//     if (result.length < n) result.push(arr[i]);  
+//     if (arr[i] === 0 && result.length < n) {      
+//       result.push(0);                            
+//     }
+//   }
+//   for (let i = 0; i < n; i++) {           
+//     arr[i] = result[i];                   
+//   }
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//     let i = m - 1, j = n - 1, k = m+n-1;
+//     while(j>=0) {
+//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--]; 
+//     }
+// };
+
+// const removeElement = (nums, val) => {
+//     let k = 0;
+//     for(let i=0; i<nums.length; i++) {
+//         if(nums[i] !== val) {
+//             nums[k++] = nums[i];
+//         }
+//     }
+//     return k;
+// };
+
+// const removeDuplicates = (nums) => {
+//   if (!nums.length) return 0;
+//   let k = 1; // pointer untuk posisi unik berikutnya
+//   for (let i = 1; i < nums.length; i++) {
+//     if (nums[i] !== nums[i - 1]) {
+//       nums[k++] = nums[i]; // overwrite dengan nilai unik
+//     }
+//   }
+//   return k;
+// };
+
+// const checkIfExist = (arr) => {
+//   for (let i=0; i<arr.length; i++) {
+//       let num = arr[i];
+//       for (let j=0; j<arr.length; j++) {
+//           if (i !== j && arr[j] === num*2) {
+//               return true;
+//           }
+//       }
+//   }
+//   return false;
+// };
+
+// ===============================
