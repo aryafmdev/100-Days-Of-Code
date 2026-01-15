@@ -2095,24 +2095,50 @@ console.log(nums.slice(0, k)); // [0,1,2,3,4]
 // LeetCode #941 - Valid Mountain Array
 // Time: O(n), Space: O(1)
 
-const validMountainArray = (arr) => {
-  const n = arr.length;
-  if (n < 3) return false;
+// const validMountainArray = (arr) => {
+//   const n = arr.length;
+//   if (n < 3) return false;
 
-  let i = 0;
+//   let i = 0;
 
-  // climb up
-  while (i + 1 < n && arr[i] < arr[i + 1]) i++;
+//   // climb up
+//   while (i + 1 < n && arr[i] < arr[i + 1]) i++;
 
-  // peak can't be first or last
-  if (i === 0 || i === n - 1) return false;
+//   // peak can't be first or last
+//   if (i === 0 || i === n - 1) return false;
 
-  // climb down
-  while (i + 1 < n && arr[i] > arr[i + 1]) i++;
+//   // climb down
+//   while (i + 1 < n && arr[i] > arr[i + 1]) i++;
 
-  return i === n - 1;
+//   return i === n - 1;
+// };
+
+// console.log(validMountainArray([2, 5, 3]));      // true
+// console.log(validMountainArray([2, 5, 5]));      // false
+// console.log(validMountainArray([0, 3, 2, 1]));   // true
+
+// ===========================
+
+// LeetCode 1299: Replace Elements with Greatest Element on Right Side
+// ES6 idiomatic, team-friendly, and efficient O(n)
+
+const replaceElements = (arr) => {
+  let maxRight = -1;
+
+  // traverse from right to left
+  for (let i = arr.length - 1; i >= 0; i--) {
+    const current = arr[i];
+    arr[i] = maxRight;          // replace with greatest on the right
+    if (current > maxRight) {
+      maxRight = current;       // update maxRight if needed
+    }
+  }
+
+  return arr;
 };
 
-console.log(validMountainArray([2, 5, 3]));      // true
-console.log(validMountainArray([2, 5, 5]));      // false
-console.log(validMountainArray([0, 3, 2, 1]));   // true
+// Example usage:
+console.log(replaceElements([17, 18, 5, 4, 6, 1]));
+// Output: [18, 6, 6, 6, 1, -1]
+
+// ============================
