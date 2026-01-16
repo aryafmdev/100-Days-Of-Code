@@ -2122,23 +2122,324 @@ console.log(nums.slice(0, k)); // [0,1,2,3,4]
 // LeetCode 1299: Replace Elements with Greatest Element on Right Side
 // ES6 idiomatic, team-friendly, and efficient O(n)
 
-const replaceElements = (arr) => {
-  let maxRight = -1;
+// const replaceElements = (arr) => {
+//   let maxRight = -1;
 
-  // traverse from right to left
-  for (let i = arr.length - 1; i >= 0; i--) {
-    const current = arr[i];
-    arr[i] = maxRight;          // replace with greatest on the right
-    if (current > maxRight) {
-      maxRight = current;       // update maxRight if needed
-    }
-  }
+//   // traverse from right to left
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     const current = arr[i];
+//     arr[i] = maxRight;          // replace with greatest on the right
+//     if (current > maxRight) {
+//       maxRight = current;       // update maxRight if needed
+//     }
+//   }
 
-  return arr;
-};
+//   return arr;
+// };
 
-// Example usage:
-console.log(replaceElements([17, 18, 5, 4, 6, 1]));
-// Output: [18, 6, 6, 6, 1, -1]
+// // Example usage:
+// console.log(replaceElements([17, 18, 5, 4, 6, 1]));
+// // Output: [18, 6, 6, 6, 1, -1]
 
 // ============================
+
+// let createHelloWorld = () => () => "Hello World";
+// let word= createHelloWorld();
+// console.log(word());
+
+// ========================
+
+// let createCounter = (n) => () => n++;
+// let counter = createCounter(90);
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// ==============================
+
+// let addDigits = (num) => {
+//     // root digit formula
+//     if(num===0) return 0;
+//     return 1+(num-1)%9;
+// };
+// console.log(addDigits(8189));
+
+// ===============================
+
+// let runningSum = (nums) => {
+//     let sum = 0;
+//     return nums.map(num=>sum+=num)
+// };
+// console.log(runningSum([1,2,3,4]));
+
+// ===============================
+
+// let maxWealth = (accounts) =>
+// Math.max(...accounts.map(customer=>customer.reduce((sum,bank) => sum+=bank, 0)));
+// console.log(maxWealth([[5,5],[6,7],[8,9]]));
+
+// =============================
+
+// let fizzBuzz = (n) => 
+//     Array.from({length:n}, (_, i) => {
+//         let x = i + 1;
+//         return x%3===0 && x%5===0 ? "FizzBuzz":
+//         x%3===0 ? "Fizz":
+//         x%5===0 ? "Buzz":
+//         String(x);
+//     });
+// console.log(fizzBuzz(15));
+
+// ========================
+
+// let numberSteps = (num) => {
+//     let steps = 0;
+//     while (num>0) {
+//     num = num%2===0 ? num/2 : num-1;
+//     steps++;
+//     }
+//     return steps;
+// };
+// console.log(numberSteps(123));
+
+// ===========================
+
+// const middleNode = (head) => {
+//     let slow = head;
+//     let fast = head;  
+//     while (fast && fast.next) {
+//         slow = slow.next;
+//         fast = fast.next.next;
+//     }
+//     return slow;
+// };
+
+// ======================
+
+// const canConstruct = (ransomNote, magazine) => {
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char) || 0) +1);
+//     }
+//     for (const char of ransomNote) {
+//         if(!charCount.has(char) || charCount.get(char) === 0) {
+//             return false;
+//         }
+//         charCount.set(char, charCount.get(char) -1);
+//     }
+//     return true;
+// };
+// console.log(canConstruct("aa", "ab"));
+// console.log(canConstruct("aa", "aba"));
+
+// ========================
+
+// const findMaxConsecutiveOnes = (nums) => {
+//     let maxCount = 0;
+//     let currentCount = 0;
+//     for (let i = 0; i < nums.length; i++) {
+//         currentCount = nums[i] === 1 ? currentCount + 1 : 0;
+//         maxCount = Math.max(maxCount, currentCount);
+//     }
+//     return maxCount;
+// };
+// console.log(findMaxConsecutiveOnes([1,0,1,1,1,0,1]));
+
+// ===========================
+
+// const findNumbers = (nums) => {
+//     // return nums.map(num=>String(num).length).filter(len=>len%2===0).length;
+//     // return nums.map(num=>Math.floor(Math.log10(num))+1).filter(len=>len%2===0).length;
+// };
+// console.log(findNumbers([1,12,123,1234]));
+
+// =================
+
+// 977. Squares of Sorted Array
+
+// const sortedSquares = (nums) => {
+//   return nums.map(num=>num**2).sort((a,b)=>a-b);
+// };
+// console.log(sortedSquares([-2,4,1,3,2]));
+
+// =======================
+
+// const duplicateZeros = (arr) => {          
+//   const n = arr.length;                    
+//   const result = [];                      
+//   for (let i = 0; i < n; i++) {           
+//     if (result.length < n) result.push(arr[i]);  
+//     if (arr[i] === 0 && result.length < n) {      
+//       result.push(0);                            
+//     }
+//   }
+//   for (let i = 0; i < n; i++) {           
+//     arr[i] = result[i];                   
+//   }
+// };
+
+// // Contoh penggunaan
+// let arr = [1, 0, 2, 3, 0, 4, 5, 0];
+// console.log([...arr]); // tampilkan array sebelum diproses
+// duplicateZeros(arr); // panggil fungsi
+// console.log(arr); // tampilkan array setelah diproses
+
+// ===================================
+
+// Merge Sorted Array (LeetCode #88)
+// const merge = (nums1, m, nums2, n) => {
+//     let i = m - 1, j = n - 1, k = m+n-1;
+//     while(j>=0) {
+//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--]; 
+//     }
+// };
+
+// // contoh input
+// let nums1 = [1,2,3,0,0,0]; // kapasitas m+n
+// let m = 3;                  // elemen valid di nums1
+// let nums2 = [2,5,6];        // array kedua
+// let n = 3;                  // elemen valid di nums2
+// merge(nums1, m, nums2, n);
+// // tampilkan hasil
+// console.log(nums1); // Output: [1,2,2,3,5,6]
+
+// ========================================================
+
+// LeetCode 27: Remove Element
+// Tujuan: hapus semua kemunculan `val` dari `nums` secara in-place,
+// lalu kembalikan jumlah elemen yang bukan `val` (k).
+
+// const removeElement = (nums, val) => {
+//     let k = 0;
+//     for(let i=0; i<nums.length; i++) {
+//         if(nums[i] !== val) {
+//             nums[k++] = nums[i];
+//         }
+//     }
+//     return k;
+// };
+
+// // Contoh penggunaan:
+// let arr = [3, 2, 2, 3];
+// let len = removeElement(arr, 3);
+// console.log(len, arr.slice(0, len)); // 2 [2, 2]
+
+// let arr1 = [0, 1, 2, 2, 3, 0, 4, 2];
+// let len1 = removeElement(arr1, 2);
+// console.log(len1, arr1.slice(0, len1)); // 5 [0, 1, 3, 0, 4]
+
+// ==========================================================
+
+// LeetCode #26: Remove Duplicates from Sorted Array
+// Time: O(n), Space: O(1)
+
+// const removeDuplicates = (nums) => {
+//   if (!nums.length) return 0;
+//   let k = 1; // pointer untuk posisi unik berikutnya
+//   for (let i = 1; i < nums.length; i++) {
+//     if (nums[i] !== nums[i - 1]) {
+//       nums[k++] = nums[i]; // overwrite dengan nilai unik
+//     }
+//   }
+//   return k;
+// };
+
+// // contoh penggunaan
+// const nums = [0,0,1,1,1,2,2,3,3,4];
+// const k = removeDuplicates(nums);
+
+// console.log(k);        // 5
+// console.log(nums.slice(0, k)); // [0,1,2,3,4]
+
+// =========================================================
+
+/**
+ * LeetCode 1346: Check If N and Its Double Exist
+ * Versi looping biasa (nested loop).
+ */
+
+// const checkIfExist = (arr) => {
+//   // Loop pertama: ambil setiap elemen sebagai kandidat n
+//   for (let i = 0; i < arr.length; i++) {
+//     const num = arr[i]; // elemen saat ini
+
+//     // Loop kedua: bandingkan dengan semua elemen lain
+//     for (let j = 0; j < arr.length; j++) {
+//       // Pastikan tidak membandingkan elemen yang sama (i !== j)
+//       if (i !== j && arr[j] === num * 2) {
+//         return true; // Jika ketemu pasangan valid, langsung return true
+//       }
+//     }
+//   }
+
+//   // Jika selesai looping tanpa menemukan pasangan, return false
+//   return false;
+// };
+
+// const checkIfExist = (arr) => {
+//   for (let i=0; i<arr.length; i++) {
+//       let num = arr[i];
+//       for (let j=0; j<arr.length; j++) {
+//           if (i !== j && arr[j] === num*2) {
+//               return true;
+//           }
+//       }
+//   }
+//   return false;
+// };
+
+// console.log(checkIfExist([10, 2, 5, 3])); // true (10 = 2 * 5)
+// console.log(checkIfExist([7, 1, 14, 11])); // true (14 = 2 * 7)
+// console.log(checkIfExist([3, 1, 7, 11])); // false
+
+// =====================
+
+// LeetCode #941 - Valid Mountain Array
+// Time: O(n), Space: O(1)
+
+// const validMountainArray = (arr) => {
+//   const n = arr.length;
+//   if (n < 3) return false;
+//   let i = 0;
+//   // climb up
+//   while (i + 1 < n && arr[i] < arr[i + 1]) i++;
+//   // peak can't be first or last
+//   if (i === 0 || i === n - 1) return false;
+//   // climb down
+//   while (i + 1 < n && arr[i] > arr[i + 1]) i++;
+//   return i === n - 1;
+// };
+
+// const validMountainArray = (arr) => {
+//     const n = arr.length;
+//     if (n<3) return false;
+//     let i = 0;
+//     while (i+1<n && arr[i] < arr[i+1]) i++;
+//     if (i===0 || i===n-1) return false;
+//     while (i+1<n && arr[i] > arr[i+1]) i++;
+//     return i === n-1;
+// };
+
+// console.log(validMountainArray([2, 5, 3]));      // true
+// console.log(validMountainArray([2, 5, 5]));      // false
+// console.log(validMountainArray([0, 3, 2, 1]));   // true
+
+// ===========================
+// LeetCode 1299: Replace Elements with Greatest Element on Right Side
+// ES6 idiomatic, team-friendly, and efficient O(n)
+
+// const replaceElements = (arr) => {
+//   let maxRight = -1;
+//   // traverse from right to left
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     let current = arr[i];
+//     arr[i] = maxRight;          // replace with greatest on the right
+//     if (current > maxRight) {
+//       maxRight = current;       // update maxRight if needed
+//     }
+//   }
+//   return arr;
+// };
+// // Example usage:
+// console.log(replaceElements([17, 18, 5, 4, 6, 1]));
+// // Output: [18, 6, 6, 6, 1, -1]
