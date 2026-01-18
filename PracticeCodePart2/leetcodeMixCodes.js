@@ -3146,3 +3146,31 @@ console.log(nums.slice(0, k)); // [0,1,2,3,4]
 // // Example tambahan
 // console.log(sortArrayByParity([5,7,8,10]));
 // // Output: [8,10,5,7]
+
+// ===================================================
+
+// LeetCode #414 - Third Maximum Number
+// const thirdMax = (nums) => {
+//   let uniq = [...new Set(nums)];              // hapus duplikat dengan Set
+//   uniq.sort((a, b) => b - a);                 // urutkan descending
+//   return uniq[2] !== undefined ? uniq[2] : uniq[0]; 
+//   // jika ada elemen ke-3, return itu; kalau tidak, return maksimum
+// };
+
+// Example usage:
+// console.log(thirdMax([3,2,1]));        // Output: 1
+// console.log(thirdMax([1,2]));          // Output: 2
+// console.log(thirdMax([2,2,3,1]));      // Output: 1
+
+// =======================================
+
+// // LeetCode #448 - Find All Numbers Disappeared in an Array
+// const findDisappearedNumbers = (nums) => {
+//   const seen = new Set(nums);                          		// simpan semua angka yang muncul
+//   return Array.from({ length: nums.length }, (_, i) => i + 1) // buat array [1..n]
+//               .filter(x => !seen.has(x));              		// ambil hanya angka yang tidak ada di Set
+// };
+
+// // Example usage:
+// console.log(findDisappearedNumbers([4,3,2,7,8,2,3,1])); // Output: [5,6]
+// console.log(findDisappearedNumbers([1,1]));             // Output: [2]
