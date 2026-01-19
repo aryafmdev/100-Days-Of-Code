@@ -3730,3 +3730,63 @@ console.log(nums.slice(0, k)); // [0,1,2,3,4]
 //   if (num===0) return 0;
 //   return 1+(num-1)%9;
 // };
+
+// ====================
+
+
+// LeetCode 724: Find pivot index (indeks titik seimbang)
+// ES6, idiomatic, readable, team-friendly
+
+const pivotIndex = (nums) => {                           // Fungsi utama: cari indeks pivot
+  const total = nums.reduce((sum, n) => sum + n, 0);     // Hitung total seluruh elemen
+  let left = 0;                                          // Akumulasi jumlah di kiri (awal 0)
+
+  for (let i = 0; i < nums.length; i++) {                // Iterasi setiap indeks i
+    const right = total - left - nums[i];                // Jumlah kanan = total - kiri - elemen saat ini
+    if (left === right) return i;                        // Jika kiri == kanan, i adalah pivot → return
+    left += nums[i];                                     // Update kiri: tambahkan elemen saat ini
+  }
+
+  return -1;                                             // Tidak ada pivot → kembalikan -1
+};
+
+// === Contoh penggunaan ===
+console.log(pivotIndex([1, 7, 3, 6, 5, 6])); // Output: 3
+// Penjelasan: di index 3 (nilai 6), jumlah kiri = 11, jumlah kanan = 11 → seimbang
+
+console.log(pivotIndex([1, 2, 3])); // Output: -1
+// Tidak ada indeks yang membuat kiri == kanan
+
+
+// LeetCode 747: Largest number at least twice of others (angka terbesar ≥ 2× yang lain)
+// ES6, idiomatic, readable, team-friendly
+
+const dominantIndex = (nums) => {                        // Fungsi utama: cari indeks angka dominan
+  if (nums.length === 0) return -1;                      // Edge case: array kosong
+  if (nums.length === 1) return 0;                       // Satu elemen selalu dominan
+
+  let max = -Infinity;                                   // Nilai terbesar saat ini
+  let second = -Infinity;                                // Nilai terbesar kedua
+  let maxIdx = -1;                                       // Indeks nilai terbesar
+
+  for (let i = 0; i < nums.length; i++) {                // Satu pass untuk cari max & second
+    const n = nums[i];                                   // Ambil elemen saat ini
+    if (n > max) {                                       // Jika lebih besar dari max
+      second = max;                                      // Geser max lama ke second
+      max = n;                                           // Update max ke nilai baru
+      maxIdx = i;                                        // Simpan indeks max
+    } else if (n > second) {                             // Jika tidak mengalahkan max, cek second
+      second = n;                                        // Update second
+    }
+  }
+
+  return max >= 2 * second ? maxIdx : -1;                // Cek syarat dominan: max ≥ 2×second
+};
+
+// === Contoh penggunaan ===
+console.log(dominantIndex([3, 6, 1, 0])); // Output: 1
+// Penjelasan: angka terbesar = 6 (index 1), second = 3 → 6 ≥ 2×3 → valid
+
+console.log(dominantIndex([1, 2, 3, 4])); // Output: -1
+// Penjelasan: angka terbesar = 4, second = 3 → 4 < 2×3 → tidak dominan
+
