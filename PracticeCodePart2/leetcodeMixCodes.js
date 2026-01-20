@@ -1771,24 +1771,24 @@
 // LeetCode #26: Remove Duplicates from Sorted Array
 // Time: O(n), Space: O(1)
 
-const removeDuplicates = (nums) => {
-  if (!nums.length) return 0;
+// const removeDuplicates = (nums) => {
+//   if (!nums.length) return 0;
 
-  let k = 1; // pointer untuk posisi unik berikutnya
-  for (let i = 1; i < nums.length; i++) {
-    if (nums[i] !== nums[i - 1]) {
-      nums[k++] = nums[i]; // overwrite dengan nilai unik
-    }
-  }
-  return k;
-};
+//   let k = 1; // pointer untuk posisi unik berikutnya
+//   for (let i = 1; i < nums.length; i++) {
+//     if (nums[i] !== nums[i - 1]) {
+//       nums[k++] = nums[i]; // overwrite dengan nilai unik
+//     }
+//   }
+//   return k;
+// };
 
-// contoh penggunaan
-const nums = [0,0,1,1,1,2,2,3,3,4];
-const k = removeDuplicates(nums);
+// // contoh penggunaan
+// const nums = [0,0,1,1,1,2,2,3,3,4];
+// const k = removeDuplicates(nums);
 
-console.log(k);        // 5
-console.log(nums.slice(0, k)); // [0,1,2,3,4]
+// console.log(k);        // 5
+// console.log(nums.slice(0, k)); // [0,1,2,3,4]
 
 // const removeDuplicates = (nums) => {
 //     if (!nums.length) return 0;
@@ -3500,10 +3500,10 @@ console.log(nums.slice(0, k)); // [0,1,2,3,4]
 // =======================
 // LeetCode #905 - Sort Array by Parity
 // ES6 idiomatic, team-friendly, easy-read
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
+// /**
+//  * @param {number[]} nums
+//  * @return {number[]}
+//  */
 // const sortArrayByParity = (nums) => {
 //     let nonEven = 0;
 //     for (let i=0; i<nums.length; i++) {
@@ -3737,56 +3737,274 @@ console.log(nums.slice(0, k)); // [0,1,2,3,4]
 // LeetCode 724: Find pivot index (indeks titik seimbang)
 // ES6, idiomatic, readable, team-friendly
 
-const pivotIndex = (nums) => {                           // Fungsi utama: cari indeks pivot
-  const total = nums.reduce((sum, n) => sum + n, 0);     // Hitung total seluruh elemen
-  let left = 0;                                          // Akumulasi jumlah di kiri (awal 0)
+// const pivotIndex = (nums) => {                           // Fungsi utama: cari indeks pivot
+//   const total = nums.reduce((sum, n) => sum + n, 0);     // Hitung total seluruh elemen
+//   let left = 0;                                          // Akumulasi jumlah di kiri (awal 0)
 
-  for (let i = 0; i < nums.length; i++) {                // Iterasi setiap indeks i
-    const right = total - left - nums[i];                // Jumlah kanan = total - kiri - elemen saat ini
-    if (left === right) return i;                        // Jika kiri == kanan, i adalah pivot → return
-    left += nums[i];                                     // Update kiri: tambahkan elemen saat ini
-  }
+//   for (let i = 0; i < nums.length; i++) {                // Iterasi setiap indeks i
+//     const right = total - left - nums[i];                // Jumlah kanan = total - kiri - elemen saat ini
+//     if (left === right) return i;                        // Jika kiri == kanan, i adalah pivot → return
+//     left += nums[i];                                     // Update kiri: tambahkan elemen saat ini
+//   }
 
-  return -1;                                             // Tidak ada pivot → kembalikan -1
-};
+//   return -1;                                             // Tidak ada pivot → kembalikan -1
+// };
 
-// === Contoh penggunaan ===
-console.log(pivotIndex([1, 7, 3, 6, 5, 6])); // Output: 3
-// Penjelasan: di index 3 (nilai 6), jumlah kiri = 11, jumlah kanan = 11 → seimbang
+// // === Contoh penggunaan ===
+// console.log(pivotIndex([1, 7, 3, 6, 5, 6])); // Output: 3
+// // Penjelasan: di index 3 (nilai 6), jumlah kiri = 11, jumlah kanan = 11 → seimbang
 
-console.log(pivotIndex([1, 2, 3])); // Output: -1
-// Tidak ada indeks yang membuat kiri == kanan
+// console.log(pivotIndex([1, 2, 3])); // Output: -1
+// // Tidak ada indeks yang membuat kiri == kanan
 
 
-// LeetCode 747: Largest number at least twice of others (angka terbesar ≥ 2× yang lain)
-// ES6, idiomatic, readable, team-friendly
+// // LeetCode 747: Largest number at least twice of others (angka terbesar ≥ 2× yang lain)
+// // ES6, idiomatic, readable, team-friendly
 
-const dominantIndex = (nums) => {                        // Fungsi utama: cari indeks angka dominan
-  if (nums.length === 0) return -1;                      // Edge case: array kosong
-  if (nums.length === 1) return 0;                       // Satu elemen selalu dominan
+// const dominantIndex = (nums) => {                        // Fungsi utama: cari indeks angka dominan
+//   if (nums.length === 0) return -1;                      // Edge case: array kosong
+//   if (nums.length === 1) return 0;                       // Satu elemen selalu dominan
 
-  let max = -Infinity;                                   // Nilai terbesar saat ini
-  let second = -Infinity;                                // Nilai terbesar kedua
-  let maxIdx = -1;                                       // Indeks nilai terbesar
+//   let max = -Infinity;                                   // Nilai terbesar saat ini
+//   let second = -Infinity;                                // Nilai terbesar kedua
+//   let maxIdx = -1;                                       // Indeks nilai terbesar
 
-  for (let i = 0; i < nums.length; i++) {                // Satu pass untuk cari max & second
-    const n = nums[i];                                   // Ambil elemen saat ini
-    if (n > max) {                                       // Jika lebih besar dari max
-      second = max;                                      // Geser max lama ke second
-      max = n;                                           // Update max ke nilai baru
-      maxIdx = i;                                        // Simpan indeks max
-    } else if (n > second) {                             // Jika tidak mengalahkan max, cek second
-      second = n;                                        // Update second
-    }
-  }
+//   for (let i = 0; i < nums.length; i++) {                // Satu pass untuk cari max & second
+//     const n = nums[i];                                   // Ambil elemen saat ini
+//     if (n > max) {                                       // Jika lebih besar dari max
+//       second = max;                                      // Geser max lama ke second
+//       max = n;                                           // Update max ke nilai baru
+//       maxIdx = i;                                        // Simpan indeks max
+//     } else if (n > second) {                             // Jika tidak mengalahkan max, cek second
+//       second = n;                                        // Update second
+//     }
+//   }
 
-  return max >= 2 * second ? maxIdx : -1;                // Cek syarat dominan: max ≥ 2×second
-};
+//   return max >= 2 * second ? maxIdx : -1;                // Cek syarat dominan: max ≥ 2×second
+// };
 
-// === Contoh penggunaan ===
-console.log(dominantIndex([3, 6, 1, 0])); // Output: 1
-// Penjelasan: angka terbesar = 6 (index 1), second = 3 → 6 ≥ 2×3 → valid
+// // === Contoh penggunaan ===
+// console.log(dominantIndex([3, 6, 1, 0])); // Output: 1
+// // Penjelasan: angka terbesar = 6 (index 1), second = 3 → 6 ≥ 2×3 → valid
 
-console.log(dominantIndex([1, 2, 3, 4])); // Output: -1
-// Penjelasan: angka terbesar = 4, second = 3 → 4 < 2×3 → tidak dominan
+// console.log(dominantIndex([1, 2, 3, 4])); // Output: -1
+// // Penjelasan: angka terbesar = 4, second = 3 → 4 < 2×3 → tidak dominan
 
+// ==============================
+
+// const dominantIndex = (nums) => {
+//   if (nums.length===0) return -1;
+//   if (nums.length===1) return 0;
+//   let sorted = [...nums].sort((a,b)=>b-a);
+//   let max = sorted[0];
+//   let secondMax = sorted[1] ?? -Infinity;
+//   let maxIndex = nums.indexOf(max);
+//   return max >= secondMax*2 ? maxIndex : -1;
+// };
+
+// const pivotIndex = (nums) => {
+//   let total = nums.reduce((sum, n)=> sum+n, 0);
+//   let left = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       let right = total-left-nums[i];
+//       if (left===right) return i;
+//       left += nums[i];
+//   }
+//   return -1
+// };
+
+// const findDisappearedNumbers = (nums) => {
+//   let seen = new Set(nums);
+//   let result = [];
+//   for (let i=1; i<=nums.length; i++) {
+//       if (!seen.has(i)) {
+//           result.push(i);
+//       }
+//   }
+//   return result;
+// };
+
+// const thirdMax = (nums) => {
+//   let uniq = [...new Set(nums)];
+//   uniq.sort((a,b)=>b-a);
+//   return uniq[2] !== undefined ? uniq[2] : uniq[0];
+// };
+
+// const thirdMax = (nums) => {
+//   let uniq = [...new Set(nums)].sort((a,b)=>b-a);
+//   return uniq[2] !== undefined ? uniq[2] : uniq[0];
+// };
+
+// const heightChecker = (heights) => {
+//   let expected = [...heights].sort((a,b)=>a-b);
+//   return heights.reduce((count, h, i)=>count+(h!==expected[i]),0);
+// };
+
+// const sortArrayByParity = (nums) => {
+//   let odd = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       if (nums[i]%2===0) {
+//           [nums[odd], nums[i]] = [nums[i], nums[odd]];
+//           odd++;
+//       }
+//   }
+//   return nums;
+// };
+
+// const moveZeroes = (nums) => {
+//   let zero = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       if (nums[i]!==0) {
+//           [nums[zero], nums[i]] = [nums[i], nums[zero]];
+//           zero++;
+//       }
+//   }
+// };
+
+// const replaceElements = (arr) => {
+//   let maxRight = -1;
+//   for (let i=arr.length-1; i>=0; i--) {
+//       let current = arr[i];
+//       arr[i] = maxRight;
+//       if (current > maxRight) {
+//           maxRight = current;
+//       }
+//   }
+//   return arr;
+// };
+
+// const validMountainArray = (arr) => {
+//   let n = arr.length;
+//   if (n<3) return false;
+//   let i = 0;
+//   while (i+1<n && arr[i]<arr[i+1]) i++;
+//   if (i===0 || i===n-1) return false;
+//   while (i+1<n && arr[i]>arr[i+1]) i++;
+//   return i===n-1;
+// };
+
+// const checkIfExist = (arr) => {
+//   for (let i=0; i<arr.length; i++) {
+//       for (let j=0; j<arr.length; j++) {
+//           if (i!==j && arr[j]===arr[i]*2) {
+//               return true;
+//           }
+//       }
+//   }
+//   return false;
+// };
+
+// const removeDuplicates = (nums) => {
+//   let k = 1;
+//   for (let i=1; i<nums.length; i++) {
+//       if (nums[i] !== nums[i-1]) {
+//           nums[k++] = nums[i];
+//       }
+//   }
+//   return k;
+// };
+
+// const removeElement = (nums, val) => {
+//   let k = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       if (nums[i] !== val) {
+//           nums[k++] = nums[i];
+//       }
+//   }
+//   return k;
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//   let i = m-1;
+//   let j = n-1;
+//   let k = m+n-1;
+//   while (j>=0) {
+//       nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//   }
+// };
+
+// const duplicateZeros = (arr) => {
+//   let n = arr.length;
+//   let result = [];
+//   for (let i=0; i<n; i++) {
+//       if (result.length<n) result.push(arr[i]);
+//       if (result.length<n && arr[i]===0) {
+//           result.push(0);
+//       }
+//   }
+//   for (let i=0; i<n; i++) {
+//       arr[i] = result[i];
+//   }
+// };
+
+// const sortedSquares = (nums) => {
+//   return nums.map(num=>num**2).sort((a,b)=>a-b);
+// };
+
+// const findNumbers = (nums) => {
+//   return nums.map(num=>String(num).length).filter(len=>len%2===0).length;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//   let maxCount = 0;
+//   let currentCount = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       currentCount = nums[i]===1 ? currentCount+1 : 0;
+//       maxCount = Math.max(maxCount, currentCount);
+//   }
+//   return maxCount;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//   let charCount = new Map();
+//   for (const char of magazine) {
+//       charCount.set(char, (charCount.get(char)||0)+1);
+//   }
+//   for (const char of ransomNote) {
+//       if (!charCount.has(char) || charCount.get(char)===0) {
+//           return false;
+//       }
+//       charCount.set(char, charCount.get(char)-1);
+//   }
+//   return true;
+// };
+
+// const middleNode = (head) => {
+//   let slow = head;
+//   let fast = head;
+//   while (fast&&fast.next) {
+//       slow = slow.next;
+//       fast = fast.next.next;
+//   }
+//   return slow;
+// };
+
+// const numberOfSteps = (num) => {
+//   let steps = 0;
+//   while (num>0) {
+//       num = num%2===0 ? num/2 : num-1;
+//       steps++;
+//   }
+//   return steps;
+// };
+
+// const fizzBuzz = (n) => 
+//   Array.from({length:n}, (_, i) => {
+//       let x = i+1;
+//       return x%3===0 && x%5===0 ? "FizzBuzz":
+//       x%3===0 ? "Fizz":
+//       x%5===0 ? "Buzz":
+//       String(x);
+//   });
+
+// const maximumWealth = (accounts) => Math.max(...accounts.map(customer=>customer.reduce((sum,bank)=>sum+=bank)));
+
+// const runningSum = (nums) => {
+//   let sum = 0;
+//   return nums.map(num=>sum+=num);
+// };
+
+// const addDigits = (num) => {
+//   if (num===0) return 0;
+//   return 1+(num-1)%9;
+// };
