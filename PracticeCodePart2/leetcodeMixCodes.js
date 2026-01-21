@@ -4008,3 +4008,236 @@
 //   if (num===0) return 0;
 //   return 1+(num-1)%9;
 // };
+
+// ==========================================================
+
+// const plusOne = (digits) => {
+//   for (let i=digits.length-1; i>=0; i--) {
+//     if (digits[i]<9) {
+//       digits[i]++;
+//       return digits;
+//     }
+//     digits[i]=0;
+//   }
+//   digits.unshift(1);
+//   return digits;
+// };
+
+// const dominantIndex = (nums) => {
+//   if (nums.length===0) return -1;
+//   if (nums.length===1) return 0;
+//   let sorted = [...nums].sort((a,b)=>b-a);
+//   let max = sorted[0];
+//   let secondMax = sorted[1] ?? -Infinity;
+//   let maxIndex = nums.indexOf(max);
+//   return max >= secondMax*2 ? maxIndex : -1;
+// };
+
+// const pivotIndex = (nums) => {
+//   let total = nums.reduce((sum, n)=> sum+n, 0);
+//   let left = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       let right = total-left-nums[i];
+//       if (left===right) return i;
+//       left += nums[i];
+//   }
+//   return -1
+// };
+
+// const findDisappearedNumbers = (nums) => {
+//   let seen = new Set(nums);
+//   let result = [];
+//   for (let i=1; i<=nums.length; i++) {
+//       if (!seen.has(i)) {
+//           result.push(i);
+//       }
+//   }
+//   return result;
+// };
+
+// const thirdMax = (nums) => {
+//   let uniq = [...new Set(nums)];
+//   uniq.sort((a,b)=>b-a);
+//   return uniq[2] !== undefined ? uniq[2] : uniq[0];
+// };
+
+// const thirdMax = (nums) => {
+//   let uniq = [...new Set(nums)].sort((a,b)=>b-a);
+//   return uniq[2] !== undefined ? uniq[2] : uniq[0];
+// };
+
+// const heightChecker = (heights) => {
+//   let expected = [...heights].sort((a,b)=>a-b);
+//   return heights.reduce((count, h, i)=>count+(h!==expected[i]),0);
+// };
+
+// const sortArrayByParity = (nums) => {
+//   let odd = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       if (nums[i]%2===0) {
+//           [nums[odd], nums[i]] = [nums[i], nums[odd]];
+//           odd++;
+//       }
+//   }
+//   return nums;
+// };
+
+// const moveZeroes = (nums) => {
+//   let zero = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       if (nums[i]!==0) {
+//           [nums[zero], nums[i]] = [nums[i], nums[zero]];
+//           zero++;
+//       }
+//   }
+// };
+
+// const replaceElements = (arr) => {
+//   let maxRight = -1;
+//   for (let i=arr.length-1; i>=0; i--) {
+//       let current = arr[i];
+//       arr[i] = maxRight;
+//       if (current > maxRight) {
+//           maxRight = current;
+//       }
+//   }
+//   return arr;
+// };
+
+// const validMountainArray = (arr) => {
+//   let n = arr.length;
+//   if (n<3) return false;
+//   let i = 0;
+//   while (i+1<n && arr[i]<arr[i+1]) i++;
+//   if (i===0 || i===n-1) return false;
+//   while (i+1<n && arr[i]>arr[i+1]) i++;
+//   return i===n-1;
+// };
+
+// const checkIfExist = (arr) => {
+//   for (let i=0; i<arr.length; i++) {
+//       for (let j=0; j<arr.length; j++) {
+//           if (i!==j && arr[j]===arr[i]*2) {
+//               return true;
+//           }
+//       }
+//   }
+//   return false;
+// };
+
+// const removeDuplicates = (nums) => {
+//   let k = 1;
+//   for (let i=1; i<nums.length; i++) {
+//       if (nums[i] !== nums[i-1]) {
+//           nums[k++] = nums[i];
+//       }
+//   }
+//   return k;
+// };
+
+// const removeElement = (nums, val) => {
+//   let k = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       if (nums[i] !== val) {
+//           nums[k++] = nums[i];
+//       }
+//   }
+//   return k;
+// };
+
+// const merge = (nums1, m, nums2, n) => {
+//   let i = m-1;
+//   let j = n-1;
+//   let k = m+n-1;
+//   while (j>=0) {
+//       nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//   }
+// };
+
+// const duplicateZeros = (arr) => {
+//   let n = arr.length;
+//   let result = [];
+//   for (let i=0; i<n; i++) {
+//       if (result.length<n) result.push(arr[i]);
+//       if (result.length<n && arr[i]===0) {
+//           result.push(0);
+//       }
+//   }
+//   for (let i=0; i<n; i++) {
+//       arr[i] = result[i];
+//   }
+// };
+
+// const sortedSquares = (nums) => {
+//   return nums.map(num=>num**2).sort((a,b)=>a-b);
+// };
+
+// const findNumbers = (nums) => {
+//   return nums.map(num=>String(num).length).filter(len=>len%2===0).length;
+// };
+
+// const findMaxConsecutiveOnes = (nums) => {
+//   let maxCount = 0;
+//   let currentCount = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       currentCount = nums[i]===1 ? currentCount+1 : 0;
+//       maxCount = Math.max(maxCount, currentCount);
+//   }
+//   return maxCount;
+// };
+
+// const canConstruct = (ransomNote, magazine) => {
+//   let charCount = new Map();
+//   for (const char of magazine) {
+//       charCount.set(char, (charCount.get(char)||0)+1);
+//   }
+//   for (const char of ransomNote) {
+//       if (!charCount.has(char) || charCount.get(char)===0) {
+//           return false;
+//       }
+//       charCount.set(char, charCount.get(char)-1);
+//   }
+//   return true;
+// };
+
+// const middleNode = (head) => {
+//   let slow = head;
+//   let fast = head;
+//   while (fast&&fast.next) {
+//       slow = slow.next;
+//       fast = fast.next.next;
+//   }
+//   return slow;
+// };
+
+// const numberOfSteps = (num) => {
+//   let steps = 0;
+//   while (num>0) {
+//       num = num%2===0 ? num/2 : num-1;
+//       steps++;
+//   }
+//   return steps;
+// };
+
+// const fizzBuzz = (n) => 
+//   Array.from({length:n}, (_, i) => {
+//       let x = i+1;
+//       return x%3===0 && x%5===0 ? "FizzBuzz":
+//       x%3===0 ? "Fizz":
+//       x%5===0 ? "Buzz":
+//       String(x);
+//   });
+
+// const maximumWealth = (accounts) => Math.max(...accounts.map(customer=>customer.reduce((sum,bank)=>sum+=bank)));
+
+// const runningSum = (nums) => {
+//   let sum = 0;
+//   return nums.map(num=>sum+=num);
+// };
+
+// const addDigits = (num) => {
+//   if (num===0) return 0;
+//   return 1+(num-1)%9;
+// };
+
+// ======================
