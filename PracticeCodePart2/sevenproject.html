@@ -1,0 +1,47 @@
+<!-- // 5. DOM Manipulation
+
+<button id="btn">Click Me</button>
+<p id="text">Hello</p>
+<script>
+  document.getElementById("btn").addEventListener("click", () => {
+    const p = document.getElementById("text");
+    p.textContent = "Button clicked!";
+    p.style.color = "red";
+  });
+</script>
+
+
+<button id="btn">Click Me</button>
+<p id="text">Hello</p>
+<script>
+  const btn = document.querySelector("#btn");
+  const text = document.querySelector("#text");
+  btn.addEventListener("click", () => {
+    text.textContent = "Button clicked!";
+    text.style.color = "red";
+  });
+</script>
+
+// 7. Mini App / Game Logic (Counter)
+
+<button id="inc">+</button>
+<button id="dec">-</button>
+<p id="count">0</p>
+<script>
+  let count = 0;
+  const update = () => document.getElementById("count").textContent = count;
+  document.getElementById("inc").onclick = () => { count++; update(); };
+  document.getElementById("dec").onclick = () => { count--; update(); };
+</script>
+
+
+<button id="inc">+</button>
+<button id="dec">-</button>
+<p id="count">0</p>
+<script>
+  let count = 0;
+  const countEl = document.querySelector("#count");
+  const update = () => countEl.textContent = count;
+  document.querySelector("#inc").onclick = () => { count++; update(); };
+  document.querySelector("#dec").onclick = () => { count--; update(); };
+</script> -->
