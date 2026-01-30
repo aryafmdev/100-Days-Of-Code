@@ -6440,3 +6440,92 @@
 //   if (num===0) return 0;
 //   return 1+(num-1)%9;
 // };
+
+// =================
+
+// const getConcatenation = (nums) => {
+//   // let double = [...nums, ...nums];
+//   let double = nums.concat(nums);
+//   return double;
+// };
+
+// const addDigits = (num) => {
+//   if (num===0) return 0;
+//   return 1+(num-1)%9;
+// };
+
+// const once = fn => {
+//   let called = false;
+//   return (...args) => {
+//       if (called) return undefined;
+//       called = true;
+//       return fn(...args)
+//   };
+// };
+
+// const argumentsLength = (...args) => {
+//     // let count = 0;
+//     // for (let i=0; i<args.length; i++) {
+//     //     count++;
+//     // }
+//     // return count;
+//     return args.length;
+// };
+
+// const argumentsLength = (...args) => args.length;
+
+// const compose = (functions) => {
+//   return (x) => {
+//    let result = x;
+//    for (let i=functions.length-1; i>=0; i--) {
+//        result = functions[i] (result);
+//    }
+//    return result;
+//   }
+// };
+
+// const reduce = (nums, fn, init) => {
+//   let acc = init;
+//   for (let i=0; i<nums.length; i++) {
+//       acc = fn(acc, nums[i]);
+//   }
+//   return acc;
+// };
+
+// const filter = (arr, fn) => {
+//   let result = [];
+//   for (let i=0; i<arr.length; i++) {
+//       if (fn(arr[i], i)) result.push(arr[i]);
+//   }
+//   return result;
+// };
+
+// const map = (arr, fn) => {
+//   let result = [];
+//   for (let i=0; i<arr.length; i++) {
+//       result.push(fn(arr[i], i));
+//   }
+//   return result;
+// };
+
+// const createCounter = (init) => {
+//   let value = init;
+//   return {
+//       increment: () => ++value,
+//       decrement: () => --value,
+//       reset: () => (value=init),
+//   }
+// };
+
+// const expect = (val) => {
+//   return {
+//       toBe(other) {
+//           if (val===other) return true;
+//           throw new Error("Not Equal");
+//       },
+//       notToBe(other) {
+//           if (val!==other) return true;
+//           throw new Error("Equal");
+//       },
+//   }
+// };
