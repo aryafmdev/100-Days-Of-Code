@@ -6443,10 +6443,29 @@
 
 // =================
 
+// const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+// const addTwoPromises = async (promise1, promise2) => {
+//   const [a, b] = await Promise.all([promise1, promise2]);
+//   return a + b;
+// };
+
 // const memoize = fn => {
 //   let cache = {};
 //   return (...args) => cache[args] ??= fn(...args);
 // };
+
+// const memoize = fn => {
+//   const cache = new Map();
+//   return (...args) => {
+//     const key = JSON.stringify(args);
+//     if (cache.has(key)) return cache.get(key);
+//     const result = fn(...args);
+//     cache.set(key, result);
+//     return result;
+//   };
+// };
+
 
 // const getConcatenation = (nums) => {
 //   // let double = [...nums, ...nums];
@@ -6943,3 +6962,6 @@
 //   if (num===0) return 0;
 //   return 1+(num-1)%9;
 // };
+
+// ===============
+

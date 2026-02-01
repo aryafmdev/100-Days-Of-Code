@@ -1,136 +1,139 @@
-// Day 01 - 30 Days JS - LeetCode
-// closures
-// #2667 - Create Hello World Function
-const createHelloWorld = () => () => 'Hello World';
+// 2621. Sleep
 
-// Day 02 - 30 Days JS - LeetCode
-// closures
-// #2620 - counter
-const createCounter = (n) => () => n++;
+// const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-// Day 03 - 30 Days JS - LeetCode
-// closures
-// #2704 - to be or not to be
-const expect = (val) => ({
-  toBe: (v) =>
-    v === val
-      ? true
-      : (() => {
-          throw 'Not Equal';
-        })(),
-  notToBe: (v) =>
-    v !== val
-      ? true
-      : (() => {
-          throw 'Equal';
-        })(),
-});
+// 2723. Add Two Promises
 
-// Day 04 - 30 Days JS - LeetCode
-// closures
-// #2665 - counter II
-const createCounter2 = (init) => {
-  let val = init;
-  return {
-    increment: () => ++val,
-    decrement: () => --val,
-    reset: () => (val = init),
-  };
-};
+// const addTwoPromises = async (promise1, promise2) => {
+//   let [a, b] = await Promise.all([promise1, promise2]);
+//   return a + b;
+// };
 
-// Day 05 - 30 Days JS - LeetCode
-// basic array transformations
-// #2635 - apply transform over each element
-const map = (arr, fn) => {
-  const res = [];
-  for (let i = 0; i < arr.length; i++) res.push(fn(arr[i], i));
-  return res;
-};
+// 2623. Memoize
 
-// Day 06 - 30 Days JS - LeetCode
-// basic array transformations
-// #2634 - filter elements from array
-const filter = (arr, fn) => {
-  const res = [];
-  for (let i = 0; i < arr.length; i++) if (fn(arr[i], i)) res.push(arr[i]);
-  return res;
-};
+// const memoize = fn => {
+//   const cache = new Map();
+//   return (...args) => {
+//     const key = JSON.stringify(args);
+//     if (cache.has(key)) return cache.get(key);
+//     const result = fn(...args);
+//     cache.set(key, result);
+//     return result;
+//   };
+// };
 
-// Day 07 - 30 Days JS - LeetCode
-// basic array transformations
-// #2626 - array reduce transformations
-const reduce = (nums, fn, init) => {
-  let val = init;
-  for (let n of nums) val = fn(val, n);
-  return val;
-};
+// 2666. Allow One Function Call
 
-// Day 08 - 30 Days JS - LeetCode
-// function transformations
-// #2629 - function composition
-const compose = (funcs) => (x) => funcs.reduceRight((v, f) => f(v), x);
+// const once = fn => {
+//   let called = false;
+//   return (...args) => {
+//       if (called) return undefined;
+//       called = true;
+//       return fn(...args)
+//   };
+// };
 
-// Day 09 - 30 Days JS - LeetCode
-// function transformations
-// #2703 - return length of argument passed
-const argumentsLength = (...args) => args.length;
+// 2703. Return Length of Arguments Passed
 
-// Day 10 - 30 Days JS - LeetCode
-// function transformations
-// #2666 - allow one function call
-const once = (fn) => {
-  let called = false,
-    result;
-  return (...args) =>
-    called ? undefined : ((called = true), (result = fn(...args)));
-};
+// const argumentsLength = (...args) => args.length;
 
-// Day 11 - 30 Days JS - LeetCode
-//
-// #
+// 2629. Function Composition
 
-// Day 12 - 30 Days JS - LeetCode
-//
-// #
+// const compose = (functions) => {
+//   return (x) => {
+//    let result = x;
+//    for (let i=functions.length-1; i>=0; i--) {
+//        result = functions[i] (result);
+//    }
+//    return result;
+//   }
+// };
 
-// Day 13 - 30 Days JS - LeetCode
-//
-// #
+// 2626. Array Reduce Transformation
 
-// Day 14 - 30 Days JS - LeetCode
-//
-// #
+// const reduce = (nums, fn, init) => {
+//   let acc = init;
+//   for (let i=0; i<nums.length; i++) {
+//       acc = fn(acc, nums[i]);
+//   }
+//   return acc;
+// };
 
-// Day 15 - 30 Days JS - LeetCode
-//
-// #
+//  2634. Filter Elements From Array
 
-// Day 16 - 30 Days JS - LeetCode
+// const filter = (arr, fn) => {
+//   let result = [];
+//   for (let i=0; i<arr.length; i++) {
+//       if(fn(arr[i], i)) result.push(arr[i]);
+//   }
+//   return result;
+// };
 
-// Day 17 - 30 Days JS - LeetCode
+// 2635. Apply Transform Over Each Element in Array
 
-// Day 18 - 30 Days JS - LeetCode
+// const map = (arr, fn) => {
+//   let result = [];
+//   for (let i=0; i<arr.length; i++) {
+//       result.push(fn(arr[i], i));
+//   }
+//   return result;
+// };
 
-// Day 19 - 30 Days JS - LeetCode
+// 2665. Counter II
 
-// Day 20 - 30 Days JS - LeetCode
+// const createCounter = (init) => {
+//   let value = init;
+//   return {
+//       increment: () => ++value,
+//       decrement: () => --value,
+//       reset: () => (value=init),
+//   }
+// };
 
-// Day 21 - 30 Days JS - LeetCode
+// 2704. To Be Or Not To Be
 
-// Day 22 - 30 Days JS - LeetCode
+// const expect = (val) => {
+//   return {
+//       toBe(other) {
+//           if (val === other) return true;
+//           throw new Error("Not Equal");
+//       },
+//       notToBe(other) {
+//           if (val !== other) return true;
+//           throw new Error("Equal");
+//       },
+//   }
+// };
 
-// Day 23 - 30 Days JS - LeetCode
+// 2620. Counter
 
-// Day 24 - 30 Days JS - LeetCode
+// const createCounter = (n) => () => n++; 
 
-// Day 25 - 30 Days JS - LeetCode
+// 2627. Create Hello World Function
 
-// Day 26 - 30 Days JS - LeetCode
+// const createHelloWorld = () => () => "Hello World";
 
-// Day 27 - 30 Days JS - LeetCode
+// 258. Add Digits
 
-// Day 28 - 30 Days JS - LeetCode
+// const addDigits = (num) => {
+//   if (num===0) return 0;
+//   return 1+(num-1)%9;
+// };
 
-// Day 29 - 30 Days JS - LeetCode
+// 1929. Concatenation of Array
 
-// Day 30 - 30 Days JS - LeetCode
+// const getConcatenation = (nums) => {
+//   return nums.concat(nums);
+// };
+
+// 485. Max Consecutive Ones
+
+// const findMaxConsecutiveOnes = (nums) => {
+//   let maxCount = 0;
+//   let currentCount = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       currentCount = nums[i]===1 ? currentCount+1 : 0;
+//       maxCount = Math.max(maxCount, currentCount);
+//   }
+//   return maxCount;
+// };
