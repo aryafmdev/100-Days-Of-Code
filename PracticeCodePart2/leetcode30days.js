@@ -1478,3 +1478,58 @@
 //   }
 //   return maxCount;
 // };
+
+// 705. Design HashSet (Contoh CREATE dari CRUD)
+
+// const MyHashSet = function() {
+//   this.set = new Set();
+// };
+
+// MyHashSet.prototype.add = function(key) {
+//   this.set.add(key);
+// };
+
+// MyHashSet.prototype.remove = function(key) {
+//   this.set.delete(key);
+// };
+
+// MyHashSet.prototype.contains = function(key) {
+//   return this.set.has(key);
+// };
+
+// 1. Two Sum (Contoh READ dari CRUD)
+
+// const twoSum = (nums, target) => {
+//   let map = new Map();
+//   for (let i=0; i<nums.length; i++) {
+//       let complement = target - nums[i];
+//       if (map.has(complement)) {
+//           return [map.get(complement), i];
+//       }
+//       map.set(nums[i], i);
+//   }
+// };
+
+// 88. Merge Sorted Array (contoh UPDATE dari CRUD)
+
+// const merge = function(nums1, m, nums2, n) {
+//   let i = m-1;
+//   let j = n-1;
+//   let k = m+n-1;
+//   while (j>=0) {
+//       nums1[k--] = (i>=0 && nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+//   }
+//   return nums1;
+// };
+
+// 27. Remove Element (contoh DELETE dari CRUD)
+
+// const removeElement = (nums, val) => {
+//   let k = 0;
+//   for (let i=0; i<nums.length; i++) {
+//       if (nums[i]!==val) {
+//           nums[k++] = nums[i];
+//       }
+//   }
+//   return k;
+// };
