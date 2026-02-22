@@ -116,12 +116,11 @@
 //     return 1+(num-1)%9;
 // }
 
-
 // let addDigits = function(num) {
 //   while(num>=10) {
 //       let sum = 0;
 //       let temp = num;
-      
+
 //       while (temp>0) {
 //           sum += temp%10;
 //           temp = Math.floor(temp/10);
@@ -142,7 +141,7 @@
 //   while (num>=10) {
 //       let sum = 0;
 //       let temp = num;
-      
+
 //       while (temp>0) {
 //           sum += temp%10;
 //           temp = Math.floor(temp/10);
@@ -163,7 +162,7 @@
 //   while(num>=10) {
 //       let sum = 0;
 //       let temp = num;
-      
+
 //       while(temp>0) {
 //           sum += temp%10;
 //           temp = Math.floor(temp/10);
@@ -185,7 +184,7 @@
 //   while (num>=10) {
 //       let sum = 0;
 //       let temp = num;
-      
+
 //       while (temp>0) {
 //           sum += temp%10;
 //           temp = Math.floor(temp/10);
@@ -229,7 +228,7 @@
 //   while(num>=10) {
 //       let sum = 0;
 //       let temp = num;
-      
+
 //       while(temp>0) {
 //           sum += temp%10;
 //           temp = Math.floor(temp/10);
@@ -251,9 +250,9 @@
 // 2620. Counter Day - 3
 
 // let createCounter = function(n) {
-    
+
 //     return function() {
-//    		return n++;     
+//    		return n++;
 //     };
 // };
 
@@ -311,7 +310,7 @@
 //     while(num>=10) {
 //         let sum = 0;
 //         let temp = num;
-        
+
 //         while(temp>0) {
 //             sum += temp%10;
 //             temp = Math.floor(temp/10);
@@ -340,7 +339,7 @@
 //     while(num>=10) {
 //         let sum = 0;
 //         let temp = num;
-        
+
 //         while(temp>0) {
 //             sum += temp%10;
 //             temp = Math.floor(temp/10);
@@ -354,7 +353,7 @@
 //   while(num>=10) {
 //       let sum = 0;
 //       let temp = num;
-      
+
 //       while(temp>0) {
 //           sum += temp%10;
 //           temp = Math.floor(temp/10);
@@ -430,7 +429,7 @@
 //   while (num>=10) {
 //       let sum = 0;
 //       let temp = num;
-      
+
 //       while (temp>0) {
 //           sum += temp%10;
 //           temp = Math.floor(temp/10);
@@ -467,7 +466,7 @@
 // ========================================================
 
 // 412. FizzBuzz - Day - 1
-// const fizzBuzz = (n) => 
+// const fizzBuzz = (n) =>
 //   Array.from({length:n}, (_, i) => {
 //       const x = i + 1;
 //       return x % 3 === 0 && x % 5 === 0 ? "FizzBuzz":
@@ -612,7 +611,7 @@
 // let middleNode = (head) => {
 //   let slow = head;
 //   let fast = head;
-  
+
 //   while(fast&&fast.next) {
 //       slow = slow.next;
 //       fast = fast.next.next;
@@ -622,7 +621,7 @@
 
 // let numberSteps = (num) => {
 //   let steps = 0;
-    
+
 //   while(num>0) {
 //       num = num%2===0 ? num/2 : num-1;
 //       steps++;
@@ -686,7 +685,7 @@
 // const middleNode = (head) => {
 //     let slow = head;
 //     let fast = head;
-    
+
 //     while (fast && fast.next) {
 //         slow = slow.next;
 //         fast = fast.next.next;
@@ -704,7 +703,7 @@
 // };
 // console.log(numberSteps(123));
 
-// let fizzBuzz = (n) => 
+// let fizzBuzz = (n) =>
 //   Array.from({length:n}, (_, i) => {
 //       let x = i + 1;
 //       return x%3===0 && x%5===0 ? "FizzBuzz":
@@ -758,7 +757,7 @@
 //   const charCount = new Map();
 //   // step 2 : hitung jumlah setiap karakter dari magazine
 //   for (const char of magazine) {
-//     // Jika karakter sudah ada → tambah jumlahnya 
+//     // Jika karakter sudah ada → tambah jumlahnya
 //     // Jika belum ada → inisialisasi dengan 1
 //     charCount.set(char, (charCount.get(char) || 0) + 1);
 //   }
@@ -772,7 +771,7 @@
 //     // jika karakter tersedia => kurangi jumlahnya (karakter dipakai sekali)
 //     charCount.set(char, charCount.get(char) - 1);
 //   }
-  
+
 //   // step 4 : jika semua karakter ransomNote terpenuhi => berhasil
 //   return true;
 // };
@@ -1116,7 +1115,7 @@
 //         } else {
 //             currentCount = 0;
 //         }
-//     } 
+//     }
 //     return maxCount;
 // };
 
@@ -1211,10 +1210,10 @@
 //   console.log(maxWealth([[4,5],[5,6],[6,4]]));
 
 // let runningSum = (nums) => {
-  //     let sum = 0;
-  //     return nums.map(num=>sum+=num);
-  // };
-  // console.log(runningSum([1,2,3,4]));
+//     let sum = 0;
+//     return nums.map(num=>sum+=num);
+// };
+// console.log(runningSum([1,2,3,4]));
 
 // let addDigits = (num) => {
 //     let sum = 0;
@@ -1247,30 +1246,30 @@
 
 // const createHelloWorld = () => () => "Hello World";
 // let word = createHelloWorld();
-// console.log(word()); 
+// console.log(word());
 
 // const canConstruct = (ransomNote, magazine) => {
-  //     const charCount = new Map();
-  //     for (const char of magazine) {
-  //         charCount.set(char, (charCount.get(char)||0)+1);
-  //     }
-  //     for (const char of ransomNote) {
-  //         if (!charCount.has(char) || charCount.get(char)===0) {
-  //             return false;
-  //         }
-  //         charCount.set(char, charCount.get(char)-1);
-  //     }
-  //     return true;
-  // };
-  
-  // console.log(canConstruct("aa","ab"));
-  // console.log(canConstruct("aa","aba"));
+//     const charCount = new Map();
+//     for (const char of magazine) {
+//         charCount.set(char, (charCount.get(char)||0)+1);
+//     }
+//     for (const char of ransomNote) {
+//         if (!charCount.has(char) || charCount.get(char)===0) {
+//             return false;
+//         }
+//         charCount.set(char, charCount.get(char)-1);
+//     }
+//     return true;
+// };
 
-  // const runningSum = (nums) => {
-    //     let sum = 0;
-    //     return nums.map(num=>sum+=num);
-    // };
-    // console.log(runningSum([1,2,3,4]));
+// console.log(canConstruct("aa","ab"));
+// console.log(canConstruct("aa","aba"));
+
+// const runningSum = (nums) => {
+//     let sum = 0;
+//     return nums.map(num=>sum+=num);
+// };
+// console.log(runningSum([1,2,3,4]));
 
 // const numberSteps = (num) => {
 //     let steps = 0;
@@ -1299,8 +1298,6 @@
 // console.log(sortedSquares([-2,4,1,3,2]));
 
 // ===============================================================
-
-
 
 // =============================================
 
@@ -1385,7 +1382,7 @@
 // };
 // console.log(numberOfSteps(123));
 
-// const fizzBuzz = (n) => 
+// const fizzBuzz = (n) =>
 //   Array.from({length: n}, (_, i) => {
 //       let x = i + 1;
 //       return x%3===0 && x%5===0 ? "FizzBuzz":
@@ -1404,7 +1401,6 @@
 //   return nums.map(num=>sum+=num);
 // };
 // console.log(runningSum([3,1,2,10,1]));
-
 
 /**
  * LeetCode #1089 - Duplicate Zeros
@@ -1438,24 +1434,24 @@
 
 // =============================================
 
-// const duplicateZeros = (arr) => {          
-//   const n = arr.length;                    
-//   const result = [];                      
-//   for (let i = 0; i < n; i++) {           
-//     if (result.length < n) result.push(arr[i]);  
-//     if (arr[i] === 0 && result.length < n) {      
-//       result.push(0);                            
+// const duplicateZeros = (arr) => {
+//   const n = arr.length;
+//   const result = [];
+//   for (let i = 0; i < n; i++) {
+//     if (result.length < n) result.push(arr[i]);
+//     if (arr[i] === 0 && result.length < n) {
+//       result.push(0);
 //     }
 //   }
-//   for (let i = 0; i < n; i++) {           
-//     arr[i] = result[i];                   
+//   for (let i = 0; i < n; i++) {
+//     arr[i] = result[i];
 //   }
 // };
 
 // const duplicateZeros = (arr) => {
 //     const n = arr.length;
 //     const result = [];
-    
+
 //     for (let i = 0; i < n; i++) {
 //         if (result.length < n) result.push(arr[i]);
 //         if (arr[i] === 0 && result.length < n) {
@@ -1634,16 +1630,16 @@
 // versi es6 idiomatic ternary
 // const merge = (nums1, m, nums2, n) => {
 //   // pointer akhir elemen valid di nums1
-//   let i = m - 1, 
+//   let i = m - 1,
 //       // pointer akhir elemen valid di nums2
-//       j = n - 1, 
+//       j = n - 1,
 //       // pointer akhir gabungan
 //       k = m + n - 1;
 
 //   // selama masih ada elemen di nums2
 //   while (j >= 0) {
 //     // pilih elemen lebih besar antara nums1[i] dan nums2[j]
-//     nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) 
+//     nums1[k--] = (i >= 0 && nums1[i] > nums2[j])
 //       ? nums1[i--]   // jika nums1[i] lebih besar → taruh di nums1[k], lalu i--
 //       : nums2[j--];  // jika tidak → taruh nums2[j] di nums1[k], lalu j--
 //   }
@@ -1755,7 +1751,6 @@
 //   }
 //   return k;
 // };
-
 
 // // Contoh penggunaan:
 // let arr = [3, 2, 2, 3];
@@ -1906,7 +1901,7 @@
 //       }
 //   }
 //   for (let i=0; i<n; i++) {
-//       arr[i] = result[i];   
+//       arr[i] = result[i];
 //   }
 // };
 
@@ -1914,7 +1909,7 @@
 //   let maxCount = 0;
 //   let currentCount = 0;
 //   for (let i=0; i<nums.length; i++) {
-//       currentCount = (nums[i]===1) ? currentCount+1 : 0; 
+//       currentCount = (nums[i]===1) ? currentCount+1 : 0;
 //       maxCount = Math.max(maxCount, currentCount);
 //   }
 //   return maxCount;
@@ -1931,7 +1926,7 @@
 //   return 1+(num-1)%9;
 // };
 
-// const maximumWealth = (accounts) => 
+// const maximumWealth = (accounts) =>
 //   Math.max(...accounts.map(customer=>customer.reduce((sum, bank)=>sum+=bank)));
 
 // const fizzBuzz = (n) =>
@@ -2036,24 +2031,24 @@
 //   return nums.map(num=>num**2).sort((a,b)=>a-b);
 // };
 
-// const duplicateZeros = (arr) => {          
-//   const n = arr.length;                    
-//   const result = [];                      
-//   for (let i = 0; i < n; i++) {           
-//     if (result.length < n) result.push(arr[i]);  
-//     if (arr[i] === 0 && result.length < n) {      
-//       result.push(0);                            
+// const duplicateZeros = (arr) => {
+//   const n = arr.length;
+//   const result = [];
+//   for (let i = 0; i < n; i++) {
+//     if (result.length < n) result.push(arr[i]);
+//     if (arr[i] === 0 && result.length < n) {
+//       result.push(0);
 //     }
 //   }
-//   for (let i = 0; i < n; i++) {           
-//     arr[i] = result[i];                   
+//   for (let i = 0; i < n; i++) {
+//     arr[i] = result[i];
 //   }
 // };
 
 // const merge = (nums1, m, nums2, n) => {
 //     let i = m - 1, j = n - 1, k = m+n-1;
 //     while(j>=0) {
-//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--]; 
+//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--];
 //     }
 // };
 
@@ -2180,7 +2175,7 @@
 
 // =============================
 
-// let fizzBuzz = (n) => 
+// let fizzBuzz = (n) =>
 //     Array.from({length:n}, (_, i) => {
 //         let x = i + 1;
 //         return x%3===0 && x%5===0 ? "FizzBuzz":
@@ -2206,7 +2201,7 @@
 
 // const middleNode = (head) => {
 //     let slow = head;
-//     let fast = head;  
+//     let fast = head;
 //     while (fast && fast.next) {
 //         slow = slow.next;
 //         fast = fast.next.next;
@@ -2264,17 +2259,17 @@
 
 // =======================
 
-// const duplicateZeros = (arr) => {          
-//   const n = arr.length;                    
-//   const result = [];                      
-//   for (let i = 0; i < n; i++) {           
-//     if (result.length < n) result.push(arr[i]);  
-//     if (arr[i] === 0 && result.length < n) {      
-//       result.push(0);                            
+// const duplicateZeros = (arr) => {
+//   const n = arr.length;
+//   const result = [];
+//   for (let i = 0; i < n; i++) {
+//     if (result.length < n) result.push(arr[i]);
+//     if (arr[i] === 0 && result.length < n) {
+//       result.push(0);
 //     }
 //   }
-//   for (let i = 0; i < n; i++) {           
-//     arr[i] = result[i];                   
+//   for (let i = 0; i < n; i++) {
+//     arr[i] = result[i];
 //   }
 // };
 
@@ -2290,7 +2285,7 @@
 // const merge = (nums1, m, nums2, n) => {
 //     let i = m - 1, j = n - 1, k = m+n-1;
 //     while(j>=0) {
-//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--]; 
+//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--];
 //     }
 // };
 
@@ -2482,7 +2477,7 @@
 
 // =============================
 
-// let fizzBuzz = (n) => 
+// let fizzBuzz = (n) =>
 //     Array.from({length:n}, (_, i) => {
 //         let x = i + 1;
 //         return x%3===0 && x%5===0 ? "FizzBuzz":
@@ -2508,7 +2503,7 @@
 
 // const middleNode = (head) => {
 //     let slow = head;
-//     let fast = head;  
+//     let fast = head;
 //     while (fast && fast.next) {
 //         slow = slow.next;
 //         fast = fast.next.next;
@@ -2566,17 +2561,17 @@
 
 // =======================
 
-// const duplicateZeros = (arr) => {          
-//   const n = arr.length;                    
-//   const result = [];                      
-//   for (let i = 0; i < n; i++) {           
-//     if (result.length < n) result.push(arr[i]);  
-//     if (arr[i] === 0 && result.length < n) {      
-//       result.push(0);                            
+// const duplicateZeros = (arr) => {
+//   const n = arr.length;
+//   const result = [];
+//   for (let i = 0; i < n; i++) {
+//     if (result.length < n) result.push(arr[i]);
+//     if (arr[i] === 0 && result.length < n) {
+//       result.push(0);
 //     }
 //   }
-//   for (let i = 0; i < n; i++) {           
-//     arr[i] = result[i];                   
+//   for (let i = 0; i < n; i++) {
+//     arr[i] = result[i];
 //   }
 // };
 
@@ -2592,7 +2587,7 @@
 // const merge = (nums1, m, nums2, n) => {
 //     let i = m - 1, j = n - 1, k = m+n-1;
 //     while(j>=0) {
-//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--]; 
+//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--];
 //     }
 // };
 
@@ -2834,7 +2829,7 @@
 
 // =============================
 
-// let fizzBuzz = (n) => 
+// let fizzBuzz = (n) =>
 //     Array.from({length:n}, (_, i) => {
 //         let x = i + 1;
 //         return x%3===0 && x%5===0 ? "FizzBuzz":
@@ -2860,7 +2855,7 @@
 
 // const middleNode = (head) => {
 //     let slow = head;
-//     let fast = head;  
+//     let fast = head;
 //     while (fast && fast.next) {
 //         slow = slow.next;
 //         fast = fast.next.next;
@@ -2918,17 +2913,17 @@
 
 // =======================
 
-// const duplicateZeros = (arr) => {          
-//   const n = arr.length;                    
-//   const result = [];                      
-//   for (let i = 0; i < n; i++) {           
-//     if (result.length < n) result.push(arr[i]);  
-//     if (arr[i] === 0 && result.length < n) {      
-//       result.push(0);                            
+// const duplicateZeros = (arr) => {
+//   const n = arr.length;
+//   const result = [];
+//   for (let i = 0; i < n; i++) {
+//     if (result.length < n) result.push(arr[i]);
+//     if (arr[i] === 0 && result.length < n) {
+//       result.push(0);
 //     }
 //   }
-//   for (let i = 0; i < n; i++) {           
-//     arr[i] = result[i];                   
+//   for (let i = 0; i < n; i++) {
+//     arr[i] = result[i];
 //   }
 // };
 
@@ -2944,7 +2939,7 @@
 // const merge = (nums1, m, nums2, n) => {
 //     let i = m - 1, j = n - 1, k = m+n-1;
 //     while(j>=0) {
-//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--]; 
+//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--];
 //     }
 // };
 
@@ -3153,7 +3148,7 @@
 // const thirdMax = (nums) => {
 //   let uniq = [...new Set(nums)];              // hapus duplikat dengan Set
 //   uniq.sort((a, b) => b - a);                 // urutkan descending
-//   return uniq[2] !== undefined ? uniq[2] : uniq[0]; 
+//   return uniq[2] !== undefined ? uniq[2] : uniq[0];
 //   // jika ada elemen ke-3, return itu; kalau tidak, return maksimum
 // };
 
@@ -3214,7 +3209,7 @@
 
 // =============================
 
-// let fizzBuzz = (n) => 
+// let fizzBuzz = (n) =>
 //     Array.from({length:n}, (_, i) => {
 //         let x = i + 1;
 //         return x%3===0 && x%5===0 ? "FizzBuzz":
@@ -3240,7 +3235,7 @@
 
 // const middleNode = (head) => {
 //     let slow = head;
-//     let fast = head;  
+//     let fast = head;
 //     while (fast && fast.next) {
 //         slow = slow.next;
 //         fast = fast.next.next;
@@ -3298,17 +3293,17 @@
 
 // =======================
 
-// const duplicateZeros = (arr) => {          
-//   const n = arr.length;                    
-//   const result = [];                      
-//   for (let i = 0; i < n; i++) {           
-//     if (result.length < n) result.push(arr[i]);  
-//     if (arr[i] === 0 && result.length < n) {      
-//       result.push(0);                            
+// const duplicateZeros = (arr) => {
+//   const n = arr.length;
+//   const result = [];
+//   for (let i = 0; i < n; i++) {
+//     if (result.length < n) result.push(arr[i]);
+//     if (arr[i] === 0 && result.length < n) {
+//       result.push(0);
 //     }
 //   }
-//   for (let i = 0; i < n; i++) {           
-//     arr[i] = result[i];                   
+//   for (let i = 0; i < n; i++) {
+//     arr[i] = result[i];
 //   }
 // };
 
@@ -3324,7 +3319,7 @@
 // const merge = (nums1, m, nums2, n) => {
 //     let i = m - 1, j = n - 1, k = m+n-1;
 //     while(j>=0) {
-//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--]; 
+//         nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--];
 //     }
 // };
 
@@ -3531,7 +3526,7 @@
 // LeetCode #1051 - Height Checker
 // const heightChecker = (heights) => {
 //   let expected = [...heights].sort((a, b) => a - b); 		// buat array baru yang sudah diurutkan ascending
-//   return heights.reduce((count, h, i) => 			 		// bandingkan tiap posisi dengan array sorted 
+//   return heights.reduce((count, h, i) => 			 		// bandingkan tiap posisi dengan array sorted
 //                         count + (h !== expected[i]), 0); 	// jika berbeda, tambah 1 ke count
 // };
 
@@ -3649,7 +3644,7 @@
 //   let n = arr.length;
 //   let result = [];
 //   for (let i=0; i<n; i++) {
-//       if (result.length<n) result.push(arr[i]); 
+//       if (result.length<n) result.push(arr[i]);
 //       if (arr[i]===0 && result.length<n) {
 //           result.push(0);
 //       }
@@ -3733,7 +3728,6 @@
 
 // ====================
 
-
 // LeetCode 724: Find pivot index (indeks titik seimbang)
 // ES6, idiomatic, readable, team-friendly
 
@@ -3756,7 +3750,6 @@
 
 // console.log(pivotIndex([1, 2, 3])); // Output: -1
 // // Tidak ada indeks yang membuat kiri == kanan
-
 
 // // LeetCode 747: Largest number at least twice of others (angka terbesar ≥ 2× yang lain)
 // // ES6, idiomatic, readable, team-friendly
@@ -3988,7 +3981,7 @@
 //   return steps;
 // };
 
-// const fizzBuzz = (n) => 
+// const fizzBuzz = (n) =>
 //   Array.from({length:n}, (_, i) => {
 //       let x = i+1;
 //       return x%3===0 && x%5===0 ? "FizzBuzz":
@@ -4219,7 +4212,7 @@
 //   return steps;
 // };
 
-// const fizzBuzz = (n) => 
+// const fizzBuzz = (n) =>
 //   Array.from({length:n}, (_, i) => {
 //       let x = i+1;
 //       return x%3===0 && x%5===0 ? "FizzBuzz":
@@ -6103,7 +6096,7 @@
 //   let j = b.length-1;
 //   let result = [];
 //   let carry = 0;
-  
+
 //   while (i>=0 || j>=0 || carry) {
 //       let bitA = i>=0 ? Number(a[i]) : 0;
 //       let bitB = j>=0 ? Number(b[j]) : 0;
@@ -6113,7 +6106,7 @@
 //       carry = Math.floor(sum/2);
 //       i--;
 //       j--;
-//   } 
+//   }
 //   return result.reverse().join("");
 // };
 
@@ -6466,7 +6459,6 @@
 //   };
 // };
 
-
 // const getConcatenation = (nums) => {
 //   // let double = [...nums, ...nums];
 //   let double = nums.concat(nums);
@@ -6625,7 +6617,7 @@
 //   let j = b.length-1;
 //   let result = [];
 //   let carry = 0;
-  
+
 //   while (i>=0 || j>=0 || carry) {
 //       let bitA = i>=0 ? Number(a[i]) : 0;
 //       let bitB = j>=0 ? Number(b[j]) : 0;
@@ -6635,7 +6627,7 @@
 //       carry = Math.floor(sum/2);
 //       i--;
 //       j--;
-//   } 
+//   }
 //   return result.reverse().join("");
 // };
 
@@ -7005,3 +6997,9 @@
 //   }
 //   return row;
 // };
+
+// 557. Reverse Words in a String III
+
+// const reverseWords = (s) =>
+//   s.split(" ").map(word => word.split("").reverse().join("")).join(" ");
+
