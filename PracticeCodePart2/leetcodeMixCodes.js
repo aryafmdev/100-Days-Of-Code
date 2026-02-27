@@ -7077,3 +7077,19 @@
 //   }
 //   return minLen === Infinity ? 0 : minLen;
 // };
+
+// 189. Rotate Array
+
+// const rotate = (nums, k) => {
+//   k = k % nums.length; 
+//   const reverse = (arr, start, end) => {
+//     while (start < end) {
+//       [arr[start], arr[end]] = [arr[end], arr[start]];
+//       start++;
+//       end--;
+//     }
+//   };
+//   reverse(nums, 0, nums.length - 1);
+//   reverse(nums, 0, k - 1);
+//   reverse(nums, k, nums.length - 1);
+// };
