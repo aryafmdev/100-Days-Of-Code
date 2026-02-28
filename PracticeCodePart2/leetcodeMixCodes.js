@@ -7093,3 +7093,8 @@
 //   reverse(nums, 0, k - 1);
 //   reverse(nums, k, nums.length - 1);
 // };
+
+// 151. Reverse Words in a String
+
+// const reverseWords = (s) =>
+//   s.trim().split(/\s+/).reverse().join(" ");
