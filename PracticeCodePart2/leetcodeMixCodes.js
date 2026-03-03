@@ -7098,3 +7098,145 @@
 
 // const reverseWords = (s) =>
 //   s.trim().split(/\s+/).reverse().join(" ");
+
+// 14. Longest Common Prefix
+
+// const longestCommonPrefix = (strs) => {
+//   if (!strs.length) return "";
+//   let prefix = strs[0];
+//   for (let i=1; i<strs.length; i++) {
+//       while (strs[i].indexOf(prefix)!==0) {
+//           prefix = prefix.slice(0, -1);
+//           if (!prefix) return "";
+//       }
+//   }
+//   return prefix;
+// };
+
+// 344. Reverse String
+
+// const reverseString = (s) => {
+//   let left = 0;
+//   let right = s.length - 1;
+//   while (left < right) {
+//     const temp = s[left];
+//     s[left] = s[right];
+//     s[right] = temp;
+//     left++;
+//     right--;
+//   }
+// };
+
+// 119. Pascal's Triangle II
+
+// const getRow = (rowIndex) => {
+//   const row = [1];
+//   for (let i = 1; i <= rowIndex; i++) {
+//     row.push(1);
+//     for (let j = i - 1; j > 0; j--) {
+//       row[j] += row[j - 1];
+//     }
+//   }
+//   return row;
+// };
+
+// 557. Reverse Words in a String III
+
+// const reverseWords = (s) =>
+//   s.split(" ").map(word => word.split("").reverse().join("")).join(" ");
+
+// 498. Diagonal Traverse
+
+// const findDiagonalOrder = (mat) => {
+//   const m = mat.length, n = mat[0].length;
+//   const res = new Array(m * n);
+//   let r = 0, c = 0, dir = 1;
+//   for (let i = 0; i < res.length; i++) {
+//     res[i] = mat[r][c];
+//     if (dir === 1) {
+//       if (c === n - 1) { r++; dir = -1; }
+//       else if (r === 0) { c++; dir = -1; }
+//       else { r--; c++; }
+//     } else {
+//       if (r === m - 1) { c++; dir = 1; }
+//       else if (c === 0) { r++; dir = 1; }
+//       else { r++; c--; }
+//     }
+//   }
+//   return res;
+// };
+
+// 54. Spiral Matrix
+
+// const spiralOrder = (matrix) => {
+//   const res = [];
+//   let top = 0, bottom = matrix.length - 1;
+//   let left = 0, right = matrix[0].length - 1;
+
+//   while (top <= bottom && left <= right) {
+//     // traverse left → right
+//     for (let j = left; j <= right; j++) res.push(matrix[top][j]);
+//     top++;
+//     // traverse top → bottom
+//     for (let i = top; i <= bottom; i++) res.push(matrix[i][right]);
+//     right--;
+//     // traverse right → left
+//     if (top <= bottom) {
+//       for (let j = right; j >= left; j--) res.push(matrix[bottom][j]);
+//       bottom--;
+//     }
+//     // traverse bottom → top
+//     if (left <= right) {
+//       for (let i = bottom; i >= top; i--) res.push(matrix[i][left]);
+//       left++;
+//     }
+//   }
+//   return res;
+// };
+
+// 167. Two Sum II - Input Array Is Sorted
+
+// const twoSum = (numbers, target) => {
+//   let left = 0, right = numbers.length - 1;
+
+//   while (left < right) {
+//     const sum = numbers[left] + numbers[right];
+//     if (sum === target) return [left + 1, right + 1];
+//     sum < target ? left++ : right--;
+//   }
+// };
+
+// 209. Minimum Size Subarray Sum
+
+// const minSubArrayLen = (target, nums) => {
+//   let left = 0, sum = 0, minLen = Infinity;
+//   for (let right = 0; right < nums.length; right++) {
+//     sum += nums[right];
+//     while (sum >= target) {
+//       minLen = Math.min(minLen, right - left + 1);
+//       sum -= nums[left++];
+//     }
+//   }
+//   return minLen === Infinity ? 0 : minLen;
+// };
+
+// 189. Rotate Array
+
+// const rotate = (nums, k) => {
+//   k = k % nums.length; 
+//   const reverse = (arr, start, end) => {
+//     while (start < end) {
+//       [arr[start], arr[end]] = [arr[end], arr[start]];
+//       start++;
+//       end--;
+//     }
+//   };
+//   reverse(nums, 0, nums.length - 1);
+//   reverse(nums, 0, k - 1);
+//   reverse(nums, k, nums.length - 1);
+// };
+
+// 151. Reverse Words in a String
+
+// const reverseWords = (s) =>
+//   s.trim().split(/\s+/).reverse().join(" ");
